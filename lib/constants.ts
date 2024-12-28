@@ -17,6 +17,6 @@ export const links = [
    {
       id: 4,
       label: 'Contacto',
-      url: '/#contact',
+      url: 'mailto:garciachaveroadrian@gmail.com',
    },
 ];
