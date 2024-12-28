@@ -6,7 +6,7 @@ export default function Footer() {
          <p>© {new Date().getFullYear()}. Todos los derechos reservados</p>
          <div className="flex gap-x-8">
             <Link href="/#about">Sobre mí</Link>
-            <Link href="/#contact">Contacto</Link>
+            <Link href="mailto:garciachaveroadrian@gmail.com">Contacto</Link>
          </div>
       </footer>
    );
