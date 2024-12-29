@@ -25,8 +25,8 @@ export default function RootLayout({
    children: React.ReactNode;
 }>) {
    return (
-      <html lang="es" className={inter.className}>
-         <body className="md:mx-40 2xl:mx-80 overflow-x-hidden">
+      <html lang="es" className={`${inter.className} max-w-full overflow-x-hidden scroll-smooth`}>
+         <body className="px-5 md:px-32 2xl:px-80 max-w-full overflow-x-hidden">
             <Navbar />
             {children}
             <Footer />
