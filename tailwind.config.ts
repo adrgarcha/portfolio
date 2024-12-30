@@ -5,11 +5,11 @@ export default {
    theme: {
       extend: {
          colors: {
-            background: 'var(--background)',
-            foreground: 'var(--foreground)',
-            primary: 'var(--primary)',
-            secondary: 'var(--secondary)',
-            tertiary: 'var(--tertiary)',
+            background: 'rgb(var(--background))',
+            foreground: 'rgb(var(--foreground))',
+            primary: 'rgb(var(--primary))',
+            secondary: 'rgb(var(--secondary))',
+            tertiary: 'rgb(var(--tertiary))',
          },
       },
    },

@@ -4,23 +4,23 @@
 
 @layer base {
    :root {
-      --background: #ccc5b9;
-      --foreground: #fffcf2;
-      --primary: #eb5e28;
-      --secondary: #252422;
-      --tertiary: #fffcf2;
+      --background: 204 197 185;
+      --foreground: 255 252 242;
+      --primary: 235 94 40;
+      --secondary: 37 36 34;
+      --tertiary: 255 252 242;
    }
 
    .dark {
-      --background: #252422;
-      --foreground: #fffcf2;
-      --primary: #eb5e28;
-      --secondary: #fffcf2;
-      --tertiary: #252422;
+      --background: 37 36 34;
+      --foreground: 255 252 242;
+      --primary: 235 94 40;
+      --secondary: 255 252 242;
+      --tertiary: 37 36 34;
    }
 }
 
 :root {
-   background-color: var(--background);
-   color: var(--secondary);
+   background-color: rgb(var(--background));
+   color: rgb(var(--secondary));
 }

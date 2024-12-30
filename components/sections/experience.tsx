@@ -3,7 +3,7 @@ import { BriefcaseBusiness } from 'lucide-react';
 export default function Experience() {
    return (
       <section className="py-12 md:pt-24 md:pb-20" id="experience">
-         <div className="relative flex items-center justify-center gap-x-4 py-4 text-secondary">
+         <div className="relative flex items-center justify-center gap-x-4 py-4 dark:text-tertiary">
             <BriefcaseBusiness className="size-6 md:size-10" />
             <h2 className="font-bold text-xl md:text-4xl">Experiencia laboral</h2>
             <div className="absolute w-screen h-[40px] md:h-[72px] mr-12 md:mr-64 bg-foreground border border-l-0 border-secondary rounded-lg rounded-l-none -z-10" />
@@ -13,14 +13,14 @@ export default function Experience() {
                Lideré el desarrollo completo, tanto backend como frontend, de una aplicación móvil con React Native para la organización de partidos
                de fútbol que cuenta con más de 700 usuarios activos.
             </ExperienceSection>
-            <div className="relative w-3 h-[618px] border-r border-l border-secondary row-span-2 order-first md:order-none">
+            <div className="relative w-3 h-[618px] border-r border-l border-secondary dark:border-secondary/30 row-span-2 order-first md:order-none">
                <div className="absolute flex items-center left-1/2 -translate-x-1/2 mt-16">
-                  <div className="size-6 bg-primary border border-secondary rounded-full" />
-                  <div className="absolute md:right-0 w-12 md:w-24 h-px bg-secondary -z-10" />
+                  <div className="size-6 bg-primary border border-secondary dark:border-secondary/30 rounded-full" />
+                  <div className="absolute md:right-0 w-12 md:w-24 h-px bg-secondary dark:bg-secondary/30 -z-10" />
                </div>
                <div className="absolute flex items-center left-1/2 -translate-x-1/2 mt-80">
-                  <div className="size-6 bg-primary border border-secondary rounded-full" />
-                  <div className="absolute w-12 md:w-24 h-px bg-secondary -z-10" />
+                  <div className="size-6 bg-primary border border-secondary dark:border-secondary/30 rounded-full" />
+                  <div className="absolute w-12 md:w-24 h-px bg-secondary dark:bg-secondary/30 -z-10" />
                </div>
             </div>
             <ExperienceSection role="Desarrollador full stack" company="Guadaltel" period="Nov. 2023 - Jul. 2024" className="mt-2 md:mt-[19.65rem]">
@@ -46,7 +46,7 @@ function ExperienceSection({
    children: React.ReactNode;
 }) {
    return (
-      <section className={`text-secondary ${className}`}>
+      <section className={className}>
          <h3 className="font-bold text-2xl md:text-3xl text-primary leading-none">{role}</h3>
          <h4 className="font-bold text-2xl md:text-3xl">{company}</h4>
          <p className="font-medium text-sm md:text-base mt-1 md:t-2 mb-2 md:mb-4">{period}</p>

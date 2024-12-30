@@ -13,7 +13,7 @@ import TypeScript from '../icons/typescript';
 export default function Projects() {
    return (
       <section className="py-12 md:pt-24 md:pb-20" id="projects">
-         <div className="relative flex items-center justify-center gap-x-4 py-4 text-secondary">
+         <div className="relative flex items-center justify-center gap-x-4 py-4 dark:text-tertiary">
             <Code2 className="size-6 md:size-10" />
             <h2 className="font-bold text-xl md:text-4xl">Proyectos</h2>
             <div className="absolute w-screen h-[40px] md:h-[72px] ml-12 md:ml-64 bg-foreground border border-r-0 border-secondary rounded-lg rounded-r-none -z-10" />
@@ -25,7 +25,7 @@ export default function Projects() {
                   alt="A picture of two phones in which the Golgorio App is being used"
                   width={960}
                   height={720}
-                  className="w-96 h-64 border border-secondary rounded-lg"
+                  className="w-96 h-64 border border-secondary dark:border-secondary/30 rounded-lg"
                />
                <div>
                   <h3 className="font-semibold text-2xl md:text-3xl">Golgorio - App para la organización de partidos</h3>
@@ -55,7 +55,7 @@ export default function Projects() {
                   alt="A picture of a laptop with the browser opened in the Memify website"
                   width={1920}
                   height={1440}
-                  className="w-96 h-64 border border-secondary rounded-lg"
+                  className="w-96 h-64 border border-secondary dark:border-secondary/30 rounded-lg"
                />
                <div>
                   <h3 className="font-semibold text-2xl md:text-3xl">Memify - Plataforma para la creación de memes</h3>
@@ -99,7 +99,7 @@ export default function Projects() {
                   alt="A picture of a laptop with the browser opened in the Mariwano website"
                   width={1920}
                   height={1440}
-                  className="w-96 h-64 border border-secondary rounded-lg"
+                  className="w-96 h-64 border border-secondary dark:border-secondary/30 rounded-lg"
                />
                <div>
                   <h3 className="font-semibold text-2xl md:text-3xl">Mariwano - Bot de Discord de uso múltiple</h3>

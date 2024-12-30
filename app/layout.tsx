@@ -1,5 +1,6 @@
 import Footer from '@/components/footer';
 import Navbar from '@/components/navbar';
+import { ThemeProvider } from '@/components/theme-provider';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
@@ -25,11 +26,13 @@ export default function RootLayout({
    children: React.ReactNode;
 }>) {
    return (
-      <html lang="es" className={`${inter.className} max-w-full overflow-x-hidden scroll-smooth`}>
+      <html lang="es" className={`${inter.className} max-w-full overflow-x-hidden scroll-smooth`} suppressHydrationWarning>
          <body className="px-5 md:px-32 2xl:px-80 max-w-full overflow-x-hidden">
-            <Navbar />
-            {children}
-            <Footer />
+            <ThemeProvider attribute="class" enableSystem={false} disableTransitionOnChange>
+               <Navbar />
+               {children}
+               <Footer />
+            </ThemeProvider>
          </body>
       </html>
    );
