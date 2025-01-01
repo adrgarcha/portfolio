@@ -1,22 +1,35 @@
 export const links = [
    {
       id: 1,
-      label: 'Sobre mí',
+      label: 'about' as const,
       url: '/#about',
    },
    {
       id: 2,
-      label: 'Experiencia',
+      label: 'experience' as const,
       url: '/#experience',
    },
    {
       id: 3,
-      label: 'Proyectos',
+      label: 'projects' as const,
       url: '/#projects',
    },
    {
       id: 4,
-      label: 'Contacto',
+      label: 'contact' as const,
       url: 'mailto:garciachaveroadrian@gmail.com',
+   },
+];
+
+export const locales = [
+   {
+      id: 1,
+      label: 'english' as const,
+      value: 'en' as const,
+   },
+   {
+      id: 2,
+      label: 'spanish' as const,
+      value: 'es' as const,
    },
 ];

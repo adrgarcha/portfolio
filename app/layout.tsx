@@ -2,6 +2,8 @@ import Footer from '@/components/footer';
 import Navbar from '@/components/navbar';
 import { ThemeProvider } from '@/components/theme-provider';
 import type { Metadata } from 'next';
+import { NextIntlClientProvider } from 'next-intl';
+import { getLocale, getMessages } from 'next-intl/server';
 import { Inter } from 'next/font/google';
 import './globals.css';
 
@@ -20,18 +22,23 @@ export const metadata: Metadata = {
    },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
    children,
 }: Readonly<{
    children: React.ReactNode;
 }>) {
+   const locale = await getLocale();
+   const messages = await getMessages();
+
    return (
-      <html lang="es" className={`${inter.className} max-w-full overflow-x-hidden scroll-smooth`} suppressHydrationWarning>
-         <body className="px-5 md:px-32 2xl:px-80 max-w-full overflow-x-hidden">
+      <html lang={locale} className={`${inter.className} max-w-full overflow-x-hidden scroll-smooth`} suppressHydrationWarning>
+         <body className="!px-5 md:!px-32 2xl:!px-80 max-w-full overflow-x-hidden">
             <ThemeProvider attribute="class" enableSystem={false} disableTransitionOnChange>
-               <Navbar />
-               {children}
-               <Footer />
+               <NextIntlClientProvider messages={messages}>
+                  <Navbar />
+                  {children}
+                  <Footer />
+               </NextIntlClientProvider>
             </ThemeProvider>
          </body>
       </html>

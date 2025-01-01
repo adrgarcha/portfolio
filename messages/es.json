@@ -1,0 +1,53 @@
+{
+    "navbar": {
+        "about": "Sobre mí",
+        "experience": "Experiencia",
+        "projects": "Proyectos",
+        "contact": "Contacto",
+        "english": "🇬🇧 Inglés",
+        "spanish": "🇪🇸 Español"
+    },
+    "about": {
+        "title": "Hey, soy <name>Adrian</name>",
+        "description": "+1 año de experiencia. <career>Ingeniero de Software y Desarrollador full stack</career> de Sevilla, España 🇪🇸. Especializado en el desarrollo de aplicaciones web y móviles <unique>únicas</unique>."
+    },
+    "experience": {
+        "title": "Experiencia laboral",
+        "first": {
+            "role": "Tech Lead",
+            "period": "Sept. 2024 - Dic. 2024",
+            "description": "Lideré el desarrollo completo, tanto backend como frontend, de una aplicación móvil con React Native para la organización de partidos de fútbol que cuenta con más de 700 usuarios activos."
+        },
+        "second": {
+            "role": "Desarrollador Full Stack",
+            "period": "Nov. 2023 - Jul. 2024",
+            "description": "Trabajé en el mantenimiento y mejora continua de una aplicación web para las administraciones públicas utilizada por miles de usuarios. Colaboré con un equipo de desarrollo para desarrollar las tareas."
+        }
+    },
+    "projects": {
+        "title": "Proyectos",
+        "first": {
+            "name": "Golgorio - App para la organización de partidos",
+            "description": "Aplicación móvil para organizar partidos de fútbol en Sevilla y encontrar equipos contra los que competir. Creada desde cero utilizando Expo y utilizada por +700 usuarios y +20 pistas para reservar."
+        },
+        "second": {
+            "name": "Memify - Plataforma para la creación de memes",
+            "description": "Plataforma web de código abierto que permite la creación de memes rápidamente a partir de plantillas dadas por R2. Distintos planes con pasarela de pago implementada con Stripe. Autenticación de usuarios. Diseñada con Figma."
+        },
+        "third": {
+            "name": "Mariwano - Bot de Discord de uso múltiple",
+            "description": "Bot de Discord de código abierto enfocado en el entretenimiento de los usuarios. Utilizado por múltiples servidores. Diversas funcionalidades como la moderación, reproducción de música, creación de memes, y mucho más."
+        }
+    },
+    "contact": {
+        "title": "Estoy siempre abierto a nuevas oportunidades y proyectos"
+    },
+    "footer": {
+        "copyright": "© {date}. Todos los derechos reservados"
+    },
+    "button": {
+        "contact": "Contáctame",
+        "visit": "Visitar",
+        "code": "Código"
+    }
+}
