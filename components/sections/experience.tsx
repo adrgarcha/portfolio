@@ -1,17 +1,21 @@
+'use client';
+
 import { BriefcaseBusiness } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 
 export default function Experience() {
+   const t = useTranslations('experience');
+
    return (
       <section className="py-12 md:pt-24 md:pb-20" id="experience">
          <div className="relative flex items-center justify-center gap-x-4 py-4 dark:text-tertiary">
             <BriefcaseBusiness className="size-6 md:size-10" />
-            <h2 className="font-bold text-xl md:text-4xl">Experiencia laboral</h2>
+            <h2 className="font-bold text-xl md:text-4xl">{t('title')}</h2>
             <div className="absolute w-screen h-[40px] md:h-[72px] mr-12 md:mr-64 bg-foreground border border-l-0 border-secondary rounded-lg rounded-l-none -z-10" />
          </div>
          <div className="grid md:flex grid-rows-2 grid-flow-col md:justify-center gap-x-10 md:gap-x-24 mt-10">
-            <ExperienceSection role="Tech Lead" company="Golgorio" period="Sept. 2024 - Dic. 2024" className="md:text-right mt-16 md:mt-14">
-               Lideré el desarrollo completo, tanto backend como frontend, de una aplicación móvil con React Native para la organización de partidos
-               de fútbol que cuenta con más de 700 usuarios activos.
+            <ExperienceSection role={t('first.role')} company="Golgorio" period={t('first.period')} className="md:text-right mt-16 md:mt-14">
+               {t('first.description')}
             </ExperienceSection>
             <div className="relative w-3 h-[618px] border-r border-l border-secondary dark:border-secondary/30 row-span-2 order-first md:order-none">
                <div className="absolute flex items-center left-1/2 -translate-x-1/2 mt-16">
@@ -23,9 +27,8 @@ export default function Experience() {
                   <div className="absolute w-12 md:w-24 h-px bg-secondary dark:bg-secondary/30 -z-10" />
                </div>
             </div>
-            <ExperienceSection role="Desarrollador full stack" company="Guadaltel" period="Nov. 2023 - Jul. 2024" className="mt-2 md:mt-[19.65rem]">
-               Trabajé en el mantenimiento y mejora continua de una aplicación web para las administraciones públicas utilizada por miles de usuarios.
-               Colaboré con un equipo de desarrollo para desarrollar las tareas.
+            <ExperienceSection role={t('second.role')} company="Guadaltel" period={t('second.period')} className="mt-2 md:mt-[19.65rem]">
+               {t('second.description')}
             </ExperienceSection>
          </div>
       </section>

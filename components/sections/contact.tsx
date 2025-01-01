@@ -1,18 +1,22 @@
+'use client';
+
 import { Mail } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 import Button from '../button';
 
 export default function Contact() {
+   const t = useTranslations('contact');
+   const tButton = useTranslations('button');
+
    return (
       <section className="relative md:grid md:grid-cols-5 md:grid-rows-2 pt-12 md:pt-24 pb-16 md:pb-20 md:px-6" id="contact">
-         <p className="md:col-span-5 font-black text-3xl md:text-6xl text-center md:text-left w-[360px] md:w-[725px] mx-auto md:mx-0">
-            Estoy siempre abierto a nuevas oportunidades y proyectos
-         </p>
+         <p className="md:col-span-5 font-black text-3xl md:text-6xl text-center md:text-left w-[360px] md:w-[725px] mx-auto md:mx-0">{t('title')}</p>
          <Arrow />
          <div className="flex justify-center mt-8 md:mt-16">
             <a href="mailto:garciachaveroadrian@gmail.com">
                <Button>
                   <Mail />
-                  Contáctame
+                  {tButton('contact')}
                </Button>
             </a>
          </div>
