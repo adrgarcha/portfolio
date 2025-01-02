@@ -32,7 +32,7 @@ export default async function RootLayout({
 
    return (
       <html lang={locale} className={`${inter.className} max-w-full overflow-x-hidden scroll-smooth`} suppressHydrationWarning>
-         <body className="!px-5 md:!px-32 2xl:!px-80 max-w-full overflow-x-hidden">
+         <body className="!px-5 lg:!px-16 2xl:!px-80 max-w-full overflow-x-hidden">
             <ThemeProvider attribute="class" enableSystem={false} disableTransitionOnChange>
                <NextIntlClientProvider messages={messages}>
                   <Navbar />

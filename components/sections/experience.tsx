@@ -53,7 +53,7 @@ function ExperienceSection({
          <h3 className="font-bold text-2xl md:text-3xl text-primary leading-none">{role}</h3>
          <h4 className="font-bold text-2xl md:text-3xl">{company}</h4>
          <p className="font-medium text-sm md:text-base mt-1 md:t-2 mb-2 md:mb-4">{period}</p>
-         <p className="md:w-[410px] text-sm md:text-base">{children}</p>
+         <p className="lg:w-[410px] text-sm md:text-base">{children}</p>
       </section>
    );
 }
