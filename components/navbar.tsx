@@ -18,7 +18,11 @@ export default function Navbar() {
             <ul className="flex items-center gap-x-2 md:gap-x-4 font-semibold text-xs md:text-base">
                {links.map(link => (
                   <li key={link.id}>
-                     <Link href={link.url}>{t(link.label)}</Link>
+                     <Link
+                        href={link.url}
+                        className="relative after:absolute after:bottom-[-2px] after:left-0 after:h-[1px] after:w-0 after:bg-current after:transition-all hover:after:w-full">
+                        {t(link.label)}
+                     </Link>
                   </li>
                ))}
             </ul>
