@@ -46,8 +46,9 @@ export default function About() {
                width={2092}
                height={2092}
                className="size-[384px] rounded-full border-4 border-primary"
+               priority
             />
-            <div className="absolute bottom-[5.34rem] md:bottom-[3.40rem] left-48 md:left-3/4 bg-primary w-[378px] md:w-[382px] h-[600px] md:h-[850px] -z-10 rotate-45" />
+            <div className="absolute bottom-[5.10rem] md:bottom-[3.40rem] left-48 md:left-3/4 bg-primary w-[378px] md:w-[382px] h-[600px] md:h-[850px] -z-10 rotate-45" />
          </div>
       </section>
    );

@@ -28,12 +28,13 @@ export default function Navbar() {
             </ul>
             <button
                onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
+               aria-label="Toggle light/dark mode"
                className="p-1 [&>svg]:size-4 [&>svg]:md:size-6 rounded-full hover:bg-black/10 transition-colors">
                {theme === 'light' ? <Sun /> : <Moon />}
             </button>
             <DropdownMenu.Root>
                <DropdownMenu.Trigger asChild>
-                  <button className="p-1 rounded-full hover:bg-black/10 transition-colors">
+                  <button aria-label="Switch language" className="p-1 rounded-full hover:bg-black/10 transition-colors">
                      <Globe className="size-4 md:size-6" />
                   </button>
                </DropdownMenu.Trigger>
