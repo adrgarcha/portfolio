@@ -25,7 +25,7 @@ export default function Projects() {
             <div className="absolute w-screen h-[40px] md:h-[72px] ml-12 md:ml-64 bg-foreground border border-r-0 border-secondary rounded-lg rounded-r-none -z-10" />
          </div>
          <div className="flex flex-col items-center gap-y-10 md:gap-y-16 mt-10 md:mt-16 mx-2 md:mx-32">
-            <section className="flex flex-col md:flex-row gap-y-4 md:gap-x-8">
+            <section className="flex flex-col md:flex-row gap-y-4 md:gap-x-8 opacity-0 intersect:opacity-100 intersect:motion-preset-slide-right intersect-once intersect-half">
                <Image
                   src="/golgorio-app.jpg"
                   alt="A picture of two phones in which the Golgorio App is being used"
@@ -52,7 +52,7 @@ export default function Projects() {
                   <p className="text-sm md:text-base">{t('first.description')}</p>
                </div>
             </section>
-            <section className="flex flex-col md:flex-row gap-y-4 md:gap-x-8">
+            <section className="flex flex-col md:flex-row gap-y-4 md:gap-x-8 opacity-0 intersect:opacity-100 intersect:motion-preset-slide-right intersect-once intersect-half">
                <Image
                   src="/memify.jpg"
                   alt="A picture of a laptop with the browser opened in the Memify website"
@@ -93,7 +93,7 @@ export default function Projects() {
                   </div>
                </div>
             </section>
-            <section className="flex flex-col md:flex-row gap-y-4 md:gap-x-8">
+            <section className="flex flex-col md:flex-row gap-y-4 md:gap-x-8 opacity-0 intersect:opacity-100 intersect:motion-preset-slide-right intersect-once intersect-half">
                <Image
                   src="/mariwano.jpg"
                   alt="A picture of a laptop with the browser opened in the Mariwano website"

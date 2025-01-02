@@ -12,7 +12,7 @@ export default function About() {
 
    return (
       <section className="min-h-screen flex flex-col md:flex-row items-center justify-around gap-y-24 pb-12 md:pb-0" id="about">
-         <div className="mt-16 mb-10 md:mt-0 md:mb-0">
+         <div className="mt-16 mb-10 md:mt-0 md:mb-0 z-10">
             <h1 className="text-7xl md:text-8xl font-black !leading-[1.15] md:w-[425px] text-center md:text-left">
                {t.rich('title', {
                   name: chunks => <span className="text-primary">{chunks}</span>,
@@ -39,7 +39,7 @@ export default function About() {
                </a>
             </div>
          </div>
-         <div className="relative">
+         <div className="relative opacity-0 intersect:opacity-100 intersect:motion-preset-slide-down-left intersect-once">
             <Image
                src="/me.jpg"
                alt="A profile picture of myself."

@@ -17,14 +17,14 @@ export default function Experience() {
             <ExperienceSection role={t('first.role')} company="Golgorio" period={t('first.period')} className="md:text-right mt-16 md:mt-14">
                {t('first.description')}
             </ExperienceSection>
-            <div className="relative w-3 h-[618px] border-r border-l border-secondary dark:border-secondary/30 row-span-2 order-first md:order-none">
+            <div className="relative w-3 h-0 intersect:h-[618px] duration-[2000ms] transition-all intersect-full intersect-once border-r border-l border-secondary dark:border-secondary/30 row-span-2 order-first md:order-none">
                <div className="absolute flex items-center left-1/2 -translate-x-1/2 mt-16">
-                  <div className="size-6 bg-primary border border-secondary dark:border-secondary/30 rounded-full" />
-                  <div className="absolute md:right-0 w-12 md:w-24 h-px bg-secondary dark:bg-secondary/30 -z-10" />
+                  <div className="size-6 bg-primary border border-secondary dark:border-secondary/30 rounded-full opacity-0 intersect:opacity-100 intersect:motion-preset-bounce intersect:motion-delay-200 intersect-once" />
+                  <div className="absolute md:right-0 w-0 intersect:w-12 intersect:md:w-24 transition-all intersect-full intersect-once duration-500 delay-200 h-px bg-secondary dark:bg-secondary/30 -z-10" />
                </div>
                <div className="absolute flex items-center left-1/2 -translate-x-1/2 mt-80">
-                  <div className="size-6 bg-primary border border-secondary dark:border-secondary/30 rounded-full" />
-                  <div className="absolute w-12 md:w-24 h-px bg-secondary dark:bg-secondary/30 -z-10" />
+                  <div className="size-6 bg-primary border border-secondary dark:border-secondary/30 rounded-full opacity-0 intersect:opacity-100 intersect:motion-preset-bounce intersect:motion-delay-500 intersect-once" />
+                  <div className="absolute w-0 intersect:w-12 intersect:md:w-24 transition-all intersect-full intersect-once duration-500 delay-500 h-px bg-secondary dark:bg-secondary/30 -z-10" />
                </div>
             </div>
             <ExperienceSection role={t('second.role')} company="Guadaltel" period={t('second.period')} className="mt-2 md:mt-[19.65rem]">
