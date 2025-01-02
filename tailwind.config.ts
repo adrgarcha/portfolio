@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-require-imports */
 import type { Config } from 'tailwindcss';
 
 export default {
@@ -14,5 +15,5 @@ export default {
       },
    },
    darkMode: 'selector',
-   plugins: [],
+   plugins: [require('tailwindcss-motion'), require('tailwindcss-intersect')],
 } satisfies Config;

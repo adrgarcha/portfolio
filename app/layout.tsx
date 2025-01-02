@@ -1,5 +1,6 @@
 import Footer from '@/components/footer';
 import Navbar from '@/components/navbar';
+import ObserverProvider from '@/components/observer-provider';
 import { ThemeProvider } from '@/components/theme-provider';
 import { Analytics } from '@vercel/analytics/react';
 import type { Metadata } from 'next';
@@ -36,9 +37,11 @@ export default async function RootLayout({
          <body className="!px-2 lg:!px-16 2xl:!px-80 max-w-full overflow-x-hidden">
             <ThemeProvider attribute="class" enableSystem={false} disableTransitionOnChange>
                <NextIntlClientProvider messages={messages}>
-                  <Navbar />
-                  {children}
-                  <Footer />
+                  <ObserverProvider>
+                     <Navbar />
+                     {children}
+                     <Footer />
+                  </ObserverProvider>
                </NextIntlClientProvider>
             </ThemeProvider>
             <Analytics />
