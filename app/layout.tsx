@@ -1,6 +1,7 @@
 import Footer from '@/components/footer';
 import Navbar from '@/components/navbar';
 import { ThemeProvider } from '@/components/theme-provider';
+import { Analytics } from '@vercel/analytics/react';
 import type { Metadata } from 'next';
 import { NextIntlClientProvider } from 'next-intl';
 import { getLocale, getMessages } from 'next-intl/server';
@@ -40,6 +41,7 @@ export default async function RootLayout({
                   <Footer />
                </NextIntlClientProvider>
             </ThemeProvider>
+            <Analytics />
          </body>
       </html>
    );
