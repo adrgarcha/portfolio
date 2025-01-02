@@ -13,7 +13,7 @@ export default function Navbar() {
    const { theme, setTheme } = useTheme();
 
    return (
-      <header className="sticky md:fixed md:left-1/2 md:-translate-x-1/2 mt-6 z-10 dark:text-tertiary">
+      <header className="sticky md:fixed md:left-1/2 md:-translate-x-1/2 mt-6 z-20 dark:text-tertiary">
          <nav className="flex justify-center gap-x-2 md:gap-x-6 bg-foreground px-6 md:px-8 py-2 md:py-4 rounded-full border border-secondary dark:border-tertiary">
             <ul className="flex items-center gap-x-2 md:gap-x-4 font-semibold text-xs md:text-base">
                {links.map(link => (
