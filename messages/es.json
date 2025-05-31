@@ -14,14 +14,28 @@
     "experience": {
         "title": "Experiencia laboral",
         "first": {
+            "role": "Desarrollador Full Stack",
+            "company": "Guadaltel",
+            "period": "Nov. 2023 - Jul. 2024",
+            "description": "Trabajé en el mantenimiento y mejora continua de una aplicación web para las administraciones públicas utilizada por miles de usuarios. Colaboré con un equipo de desarrollo para desarrollar las tareas."
+        },
+        "second": {
             "role": "Tech Lead",
+            "company": "Golgorio",
             "period": "Sept. 2024 - Dic. 2024",
             "description": "Lideré el desarrollo completo, tanto backend como frontend, de una aplicación móvil con React Native para la organización de partidos de fútbol que cuenta con más de 700 usuarios activos."
         },
-        "second": {
-            "role": "Desarrollador Full Stack",
-            "period": "Nov. 2023 - Jul. 2024",
-            "description": "Trabajé en el mantenimiento y mejora continua de una aplicación web para las administraciones públicas utilizada por miles de usuarios. Colaboré con un equipo de desarrollo para desarrollar las tareas."
+        "third": {
+            "role": "Desarrollador de software",
+            "company": "Éxxita",
+            "period": "Enero 2025 - Abril 2025",
+            "description": "Me inicié como desarrollador a tiempo completo, participando en proyectos internos y externos y liderando la migración de código legacy. Esta experiencia fortaleció mis bases técnicas y mi capacidad para trabajar en equipo de forma ágil."
+        },
+        "fourth": {
+            "role": "Desarrollador de software",
+            "company": "Freelance",
+            "period": "Abril 2025 - Actualidad",
+            "description": "Como desarrollador freelance, colaboro con empresas y emprendedores creando soluciones digitales a medida. Diseño aplicaciones web, automatizo procesos y ofrezco asesoramiento técnico alineado con sus objetivos de negocio."
         }
     },
     "projects": {

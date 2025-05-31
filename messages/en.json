@@ -14,14 +14,28 @@
     "experience": {
         "title": "Work experience",
         "first": {
+            "role": "Full Stack Developer",
+            "company": "Guadaltel",
+            "period": "Nov. 2023 - Jul. 2024",
+            "description": "I worked on the maintenance and continuous improvement of a web application for public administrations used by thousands of users. I collaborated with a development team to develop the tasks."
+        },
+        "second": {
             "role": "Tech Lead",
+            "company": "Golgorio",
             "period": "Sept. 2024 - Dec. 2024",
             "description": "I led the complete development, both backend and frontend, of a mobile application with React Native for the organization of football matches that has more than 700 active users."
         },
-        "second": {
-            "role": "Full Stack Developer",
-            "period": "Nov. 2023 - Jul. 2024",
-            "description": "I worked on the maintenance and continuous improvement of a web application for public administrations used by thousands of users. I collaborated with a development team to develop the tasks."
+        "third": {
+            "role": "Software Developer",
+            "company": "Éxxita",
+            "period": "Jan. 2025 - Apr. 2025",
+            "description": "I started as a full-time developer, participating in internal and external projects and leading the migration of legacy code. This experience strengthened my technical foundations and my ability to work in agile teams."
+        },
+        "fourth": {
+            "role": "Software Developer",
+            "company": "Freelance",
+            "period": "Apr. 2025 - Present",
+            "description": "As a freelance developer, I collaborate with companies and entrepreneurs creating custom digital solutions. I design web applications, automate processes and provide technical consulting aligned with their business objectives."
         }
     },
     "projects": {
