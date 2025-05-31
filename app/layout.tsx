@@ -14,6 +14,7 @@ const inter = Inter({ subsets: ['latin'] });
 export const metadata: Metadata = {
    title: 'Adrian Garcia - Portfolio',
    description: 'Mi portfolio personal dónde podrás conocerme y saber más sobre mi carrera profesional como ingeniero de software 👋.',
+   metadataBase: new URL('https://adrigarcia.dev'),
    openGraph: {
       title: 'Adrian Garcia - Portfolio',
       description: 'Mi portfolio personal dónde podrás conocerme y saber más sobre mi carrera profesional como ingeniero de software 👋.',
@@ -21,6 +22,15 @@ export const metadata: Metadata = {
       type: 'website',
       locale: 'es_ES',
       siteName: 'Adrian Garcia - Portfolio',
+   },
+   twitter: {
+      card: 'summary_large_image',
+      title: 'Adrian Garcia - Portfolio',
+      description: 'Mi portfolio personal dónde podrás conocerme y saber más sobre mi carrera profesional como ingeniero de software 👋.',
+   },
+   other: {
+      'itemprop:name': 'Adrian Garcia - Portfolio',
+      'itemprop:description': 'Mi portfolio personal dónde podrás conocerme y saber más sobre mi carrera profesional como ingeniero de software 👋.',
    },
 };
 
