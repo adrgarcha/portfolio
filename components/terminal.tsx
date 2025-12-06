@@ -93,6 +93,7 @@ export default function Terminal() {
    const speedBoostUsedRef = useRef(false);
    const animationStartTimeRef = useRef<number>(Date.now());
    const isTypingRef = useRef(true);
+   const isFastRef = useRef(false);
 
    const handleSpeedBoostUsed = (timeElapsed: number, inputType?: string) => {
       speedBoostUsedRef.current = true;
@@ -116,9 +117,11 @@ export default function Terminal() {
       onFirstBoost: handleSpeedBoostUsed,
    });
 
+   isFastRef.current = isBoosting;
+
    const { displayedLines, isTyping } = useTypewriter({
       lines: TERMINAL_LINES,
-      isFast: isBoosting,
+      isFastRef,
       onComplete: handleAnimationComplete,
    });
 
