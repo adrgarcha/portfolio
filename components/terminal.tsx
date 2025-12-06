@@ -2,6 +2,7 @@
 
 import { ExternalLinkIcon } from 'lucide-react';
 import Link from 'next/link';
+import posthog from 'posthog-js';
 import { useEffect, useRef, useState } from 'react';
 
 const TYPING_SPEED = 40;
@@ -51,6 +52,9 @@ export default function Terminal() {
    const hintTimeoutRef = useRef<NodeJS.Timeout | null>(null);
    const isSpaceHeldRef = useRef(false);
    const hasUsedSpaceRef = useRef(false);
+   const animationStartTimeRef = useRef<number>(Date.now());
+   const speedBoostUsedRef = useRef(false);
+   const animationCompletedRef = useRef(false);
 
    const scheduleHint = () => {
       if (hintTimeoutRef.current) {
@@ -88,11 +92,28 @@ export default function Terminal() {
          }
       };
 
-      window.addEventListener('keydown', handleKeyDown);
+      const handleFirstSpeedBoost = () => {
+         if (!speedBoostUsedRef.current) {
+            speedBoostUsedRef.current = true;
+            posthog.capture('terminal_speed_boost_used', {
+               time_until_boost_seconds: (Date.now() - animationStartTimeRef.current) / 1000,
+            });
+         }
+      };
+
+      const originalKeyDown = handleKeyDown;
+      const wrappedKeyDown = (e: KeyboardEvent) => {
+         if (e.code === 'Space' && isTyping) {
+            handleFirstSpeedBoost();
+         }
+         originalKeyDown(e);
+      };
+
+      window.addEventListener('keydown', wrappedKeyDown);
       window.addEventListener('keyup', handleKeyUp);
 
       return () => {
-         window.removeEventListener('keydown', handleKeyDown);
+         window.removeEventListener('keydown', wrappedKeyDown);
          window.removeEventListener('keyup', handleKeyUp);
       };
    }, [isTyping]);
@@ -125,6 +146,13 @@ export default function Terminal() {
 
          if (currentLineIndex >= allLines.length) {
             setIsTyping(false);
+            if (!animationCompletedRef.current) {
+               animationCompletedRef.current = true;
+               posthog.capture('terminal_animation_completed', {
+                  total_duration_seconds: (Date.now() - animationStartTimeRef.current) / 1000,
+                  used_speed_boost: speedBoostUsedRef.current,
+               });
+            }
             return;
          }
 
@@ -220,6 +248,12 @@ export default function Terminal() {
                         href={CAL_LINK}
                         target="_blank"
                         rel="noopener noreferrer"
+                        onClick={() => {
+                           posthog.capture('calendar_cta_clicked', {
+                              time_to_click_seconds: (Date.now() - animationStartTimeRef.current) / 1000,
+                              used_speed_boost: speedBoostUsedRef.current,
+                           });
+                        }}
                         className="group inline-flex items-center gap-3 px-6 py-3 bg-primary/10 border border-primary/30 rounded-lg
                                  hover:bg-primary/20 hover:border-primary/50 transition-all duration-300">
                         <span className="text-primary font-medium">$ open</span>
