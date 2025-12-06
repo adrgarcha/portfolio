@@ -4,23 +4,35 @@
 
 @layer base {
    :root {
-      --background: 204 197 185;
-      --foreground: 255 252 242;
-      --primary: 235 94 40;
-      --secondary: 37 36 34;
-      --tertiary: 255 252 242;
-   }
-
-   .dark {
       --background: 37 36 34;
       --foreground: 255 252 242;
       --primary: 235 94 40;
-      --secondary: 255 252 242;
-      --tertiary: 37 36 34;
+      --secondary: 204 197 185;
+      --tertiary: 64 61 57;
    }
 }
 
 :root {
    background-color: rgb(var(--background));
-   color: rgb(var(--secondary));
+   color: rgb(var(--foreground));
+}
+
+@keyframes blink {
+   0%,
+   50% {
+      opacity: 1;
+   }
+   51%,
+   100% {
+      opacity: 0;
+   }
+}
+
+.animate-blink {
+   animation: blink 1s step-end infinite;
+}
+
+::selection {
+   background-color: rgb(var(--primary));
+   color: rgb(var(--foreground));
 }
