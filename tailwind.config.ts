@@ -4,6 +4,9 @@ export default {
    content: ['./components/**/*.{js,ts,jsx,tsx,mdx}', './app/**/*.{js,ts,jsx,tsx,mdx}'],
    theme: {
       extend: {
+         screens: {
+            xs: '400px',
+         },
          colors: {
             background: 'rgb(var(--background))',
             foreground: 'rgb(var(--foreground))',
