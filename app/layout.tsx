@@ -3,24 +3,39 @@ import type { Metadata } from 'next';
 import { JetBrains_Mono } from 'next/font/google';
 import './globals.css';
 
-const jetbrainsMono = JetBrains_Mono({ subsets: ['latin'] });
+import CookieBanner from '@/components/cookie-banner';
+import Footer from '@/components/footer';
+import Nav from '@/components/nav';
+
+const jetbrainsMono = JetBrains_Mono({
+   subsets: ['latin'],
+   weight: ['300', '400', '500', '700', '800'],
+   style: ['normal', 'italic'],
+   variable: '--font-mono',
+   display: 'swap',
+});
 
 export const metadata: Metadata = {
-   title: 'Adrian Garcia - En mantenimiento',
-   description: 'Estamos afinando motores. La nueva versión de mi web está casi lista.',
-   metadataBase: new URL('https://adrigarcia.dev'),
+   title: {
+      default: 'Adri Chavero — Desarrollo de software a medida',
+      template: '%s · Adri Chavero',
+   },
+   description:
+      'Desarrollo aplicaciones web y móviles a medida para PYMEs. De la idea al producto, software hecho para resolver un problema concreto de tu negocio. Desde Sevilla.',
+   metadataBase: new URL('https://adrichavero.com'),
    openGraph: {
-      title: 'Adrian Garcia - En mantenimiento',
-      description: 'Estamos afinando motores. La nueva versión de mi web está casi lista.',
-      url: 'https://adrigarcia.dev',
+      title: 'Adri Chavero — Desarrollo de software a medida',
+      description:
+         'Desarrollo aplicaciones web y móviles a medida para PYMEs. Software hecho para resolver un problema concreto de tu negocio. Desde Sevilla.',
+      url: 'https://adrichavero.com',
       type: 'website',
       locale: 'es_ES',
-      siteName: 'Adrian Garcia',
+      siteName: 'Adri Chavero',
    },
    twitter: {
       card: 'summary_large_image',
-      title: 'Adrian Garcia - En mantenimiento',
-      description: 'Estamos afinando motores. La nueva versión de mi web está casi lista.',
+      title: 'Adri Chavero — Desarrollo de software a medida',
+      description: 'Desarrollo aplicaciones web y móviles a medida para PYMEs. Desde Sevilla.',
    },
 };
 
@@ -30,9 +45,12 @@ export default function RootLayout({
    children: React.ReactNode;
 }>) {
    return (
-      <html lang="es" className={`${jetbrainsMono.className} scroll-smooth`}>
-         <body className="bg-background text-foreground min-h-screen flex items-center justify-center p-4 md:p-8">
+      <html lang="es" className={`${jetbrainsMono.variable} scroll-smooth`}>
+         <body>
+            <Nav />
             {children}
+            <Footer />
+            <CookieBanner />
             <Analytics />
          </body>
       </html>
