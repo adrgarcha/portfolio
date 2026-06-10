@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
 
 import { CAL_API_BASE, CAL_API_KEY, CAL_EVENT_SLUG, CAL_TIMEZONE, CAL_USERNAME, isCalConfigured } from '@/lib/cal';
+import { clientIp, enforce, slotsLimiter } from '@/lib/ratelimit';
 
 export async function GET(request: Request) {
    const { searchParams } = new URL(request.url);
@@ -13,6 +14,14 @@ export async function GET(request: Request) {
 
    if (!isCalConfigured()) {
       return NextResponse.json({ configured: false, slots: {} });
+   }
+
+   const { success, retryAfter } = await enforce(slotsLimiter, clientIp(request));
+   if (!success) {
+      return NextResponse.json(
+         { configured: true, error: 'Demasiadas peticiones, espera un momento.', slots: {} },
+         { status: 429, headers: { 'Retry-After': String(retryAfter) } },
+      );
    }
 
    const url = new URL(`${CAL_API_BASE}/slots`);

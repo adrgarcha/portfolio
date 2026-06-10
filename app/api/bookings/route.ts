@@ -2,8 +2,11 @@ import { NextResponse } from 'next/server';
 
 import { CAL_API_BASE, CAL_API_KEY, CAL_EVENT_SLUG, CAL_TIMEZONE, CAL_USERNAME, isCalConfigured } from '@/lib/cal';
 import { getPostHogClient } from '@/lib/posthog-server';
+import { bookingsLimiter, clientIp, enforce } from '@/lib/ratelimit';
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const NAME_MAX = 120;
+const EMAIL_MAX = 160;
 
 interface BookingBody {
    start?: string;
@@ -17,6 +20,14 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: 'El calendario no está configurado todavía.' }, { status: 503 });
    }
 
+   const { success, retryAfter } = await enforce(bookingsLimiter, clientIp(request));
+   if (!success) {
+      return NextResponse.json(
+         { error: 'Demasiadas reservas seguidas. Espera un momento e inténtalo de nuevo.' },
+         { status: 429, headers: { 'Retry-After': String(retryAfter) } },
+      );
+   }
+
    let body: BookingBody;
    try {
       body = await request.json();
@@ -27,6 +38,9 @@ export async function POST(request: Request) {
    const { start, name, email, notes } = body;
    if (!start || !name?.trim() || !email?.trim()) {
       return NextResponse.json({ error: 'Nombre, email y hora son obligatorios' }, { status: 400 });
+   }
+   if (name.trim().length > NAME_MAX || email.trim().length > EMAIL_MAX) {
+      return NextResponse.json({ error: 'El nombre o el email son demasiado largos' }, { status: 400 });
    }
    if (!EMAIL_RE.test(email)) {
       return NextResponse.json({ error: 'El email no parece válido' }, { status: 400 });
