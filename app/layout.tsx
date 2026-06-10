@@ -21,12 +21,12 @@ export const metadata: Metadata = {
       template: '%s · Adri Chavero',
    },
    description:
-      'Desarrollo aplicaciones web y móviles a medida para PYMEs. De la idea al producto, software hecho para resolver un problema concreto de tu negocio. Desde Sevilla.',
+      'Desarrollo aplicaciones web y móviles a medida. De la idea al producto, software hecho para resolver un problema concreto de tu negocio. Desde Sevilla.',
    metadataBase: new URL('https://adrichavero.com'),
    openGraph: {
       title: 'Adri Chavero — Desarrollo de software a medida',
       description:
-         'Desarrollo aplicaciones web y móviles a medida para PYMEs. Software hecho para resolver un problema concreto de tu negocio. Desde Sevilla.',
+         'Desarrollo aplicaciones web y móviles a medida. Software hecho para resolver un problema concreto de tu negocio. Desde Sevilla.',
       url: 'https://adrichavero.com',
       type: 'website',
       locale: 'es_ES',
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
    twitter: {
       card: 'summary_large_image',
       title: 'Adri Chavero — Desarrollo de software a medida',
-      description: 'Desarrollo aplicaciones web y móviles a medida para PYMEs. Desde Sevilla.',
+      description: 'Desarrollo aplicaciones web y móviles a medida. Desde Sevilla.',
    },
 };
 

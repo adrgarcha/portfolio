@@ -14,7 +14,7 @@ export default function Footer() {
             <div className="footer-cols">
                <div className="footer-col">
                   <h4>adri_chavero</h4>
-                  <p className="footer-brand-line">Desarrollo de aplicaciones web y móviles a medida para PYMEs.</p>
+                  <p className="footer-brand-line">Desarrollo de aplicaciones web y móviles a medida.</p>
                   <p style={{ marginTop: '1rem' }}>
                      <a className="footer-ext" href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer">
                         Sígueme en LinkedIn <span className="arrow">↗</span>

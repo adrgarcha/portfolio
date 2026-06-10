@@ -13,8 +13,7 @@ export default function Hero() {
                </p>
                <h1 className="h-hero">Tú me cuentas el problema. Yo te entrego el software que lo resuelve.</h1>
                <p className="lede">
-                  Desarrollo aplicaciones web y móviles a medida para PYMEs. Hechas para resolver un problema concreto de tu negocio — no
-                  plantillas, no soluciones de catálogo. Y de principio a fin tratas con quien las construye.
+                  Hecho para resolver un problema concreto de tu negocio. Tratas solamente conmigo de principio a fin.
                </p>
                <div className="hero-actions">
                   <CtaLink large source="hero" />

@@ -10,7 +10,7 @@ import { SERVICES } from '@/lib/services';
 export const metadata: Metadata = {
    title: 'Servicios',
    description:
-      'Desarrollo web a medida, integraciones, apps móviles y mantenimiento para PYMEs. Software hecho para resolver un problema concreto de tu negocio.',
+      'Desarrollo web a medida, integraciones, apps móviles y mantenimiento. Software hecho para resolver un problema concreto de tu negocio.',
 };
 
 const [web, ...rest] = SERVICES;

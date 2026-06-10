@@ -105,7 +105,7 @@ export const TESTIMONIALS: Testimonial[] = [
 ];
 
 export const LINKEDIN_TOPICS: Topic[] = [
-   { text: 'Desarrollo a medida para PYMEs', meta: 'post' },
+   { text: 'Desarrollo de software a medida', meta: 'post' },
    { text: 'Integraciones que ahorran horas de trabajo', meta: 'post' },
    { text: 'El día a día como desarrollador freelance', meta: 'post' },
    { text: 'Herramientas y trucos para devs', meta: 'post' },
