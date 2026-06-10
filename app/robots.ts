@@ -5,7 +5,8 @@ export default function robots(): MetadataRoute.Robots {
       rules: {
          userAgent: '*',
          allow: '/',
+         disallow: ['/aviso-legal', '/politica-de-privacidad', '/politica-de-cookies', '/api/'],
       },
-      sitemap: 'https://adrigarcia.dev/sitemap.xml',
+      sitemap: 'https://adrichavero.com/sitemap.xml',
    };
 }
