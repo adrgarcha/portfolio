@@ -105,7 +105,7 @@
 
    /* ---------- typography ---------- */
    .h-hero {
-      font-size: clamp(2.1rem, 5.6vw, 4.1rem);
+      font-size: clamp(2.1rem, 5.6vw, 3.4rem);
       font-weight: 800;
       line-height: 1.05;
       letter-spacing: -0.03em;
