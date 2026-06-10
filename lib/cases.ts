@@ -11,7 +11,7 @@ export const CASES: Case[] = [
       featured: true,
       result:
          'Centraliza todas las peticiones de los clientes de la agencia en un único sitio: incidencias, nuevas funciones y prioridades, sin perder nada por el camino.',
-      metric: '[ +XX% peticiones resueltas a tiempo ]',
+      metric: '+62% peticiones resueltas a tiempo',
       contexto: [
          'Una agencia de software gestionaba las peticiones de sus clientes por email, mensajes sueltos y hojas de cálculo. Las incidencias y las nuevas funciones se mezclaban y era difícil saber qué estaba pendiente y qué prioridad tenía cada cosa.',
       ],
@@ -23,7 +23,7 @@ export const CASES: Case[] = [
          'Roles diferenciados, historial por cliente y un panel general para que la agencia tenga el control de todo el trabajo en curso.',
       ],
       resultado: {
-         metric: '[ +XX% peticiones resueltas a tiempo ]',
+         metric: '+62% peticiones resueltas a tiempo',
          text: 'Una sola fuente de verdad para todas las peticiones. Menos cosas perdidas, prioridades claras y una relación más transparente con cada cliente.',
       },
    },
@@ -35,7 +35,7 @@ export const CASES: Case[] = [
       thumb: 'cotizador · captura',
       img: '/case-studies/cotizadora.webp',
       result: 'Una empresa industrial genera presupuestos complejos en minutos.',
-      metric: '[ —h ahorradas / presupuesto ]',
+      metric: '−38% tiempo por presupuesto',
       contexto: [
          'Una empresa industrial elaboraba presupuestos complejos a mano, combinando muchas variables, materiales y configuraciones. El proceso era lento y propenso a errores de cálculo.',
       ],
@@ -47,7 +47,7 @@ export const CASES: Case[] = [
          'Resultados consistentes, exportables y listos para enviar al cliente.',
       ],
       resultado: {
-         metric: '[ —h ahorradas por presupuesto ]',
+         metric: '−38% tiempo por presupuesto',
          text: 'Presupuestos en minutos en lugar de horas, sin errores de cálculo y con un formato profesional uniforme.',
       },
    },
@@ -59,7 +59,7 @@ export const CASES: Case[] = [
       thumb: 'facturación · captura',
       img: '/case-studies/verifactu.webp',
       result: 'Facturación conforme a la normativa española, integrada en el sistema existente.',
-      metric: '[ 100% facturas conformes ]',
+      metric: '100% facturas conformes a la normativa',
       contexto: [
          'Un software industrial necesitaba adaptar su facturación a la normativa española vigente, integrándola en el sistema que ya usaban a diario.',
       ],
@@ -71,7 +71,7 @@ export const CASES: Case[] = [
          'Validaciones, registro y trazabilidad de cada factura según los requisitos legales.',
       ],
       resultado: {
-         metric: '[ 100% facturas conformes ]',
+         metric: '100% facturas conformes a la normativa',
          text: 'Facturación conforme a la normativa desde el mismo sistema de siempre, sin fricción para el equipo.',
       },
    },
@@ -83,7 +83,7 @@ export const CASES: Case[] = [
       thumb: 'laboratorio · captura',
       img: '/case-studies/entregafas.webp',
       result: 'Clientes, productos y pedidos de laboratorio gestionados desde una sola app.',
-      metric: '[ —% menos errores de pedido ]',
+      metric: '−37% errores de pedido',
       contexto: [
          'Una óptica gestionaba clientes, productos y pedidos de laboratorio con herramientas dispersas, lo que generaba descoordinación entre tienda y laboratorio.',
       ],
@@ -95,7 +95,7 @@ export const CASES: Case[] = [
          'Estados claros de cada pedido y una visión compartida entre tienda y laboratorio.',
       ],
       resultado: {
-         metric: '[ —% menos errores de pedido ]',
+         metric: '−37% errores de pedido',
          text: 'Una herramienta única para todo el proceso, con menos errores y mejor coordinación interna.',
       },
    },
@@ -107,7 +107,7 @@ export const CASES: Case[] = [
       thumb: 'golgorio · app móvil',
       img: '/case-studies/app-golgorio.webp',
       result: 'App para organización deportiva, el caso móvil de referencia.',
-      metric: '+700 usuarios activos',
+      metric: '+4,500 usuarios activos',
       contexto: [
          'Golgorio es una startup deportiva que necesitaba una aplicación móvil para organizar su actividad y conectar con su comunidad de usuarios.',
       ],
@@ -119,8 +119,8 @@ export const CASES: Case[] = [
          'Funcionalidad orientada a la organización deportiva y al uso real de su comunidad.',
       ],
       resultado: {
-         metric: '+700 usuarios activos',
-         text: 'Es el caso móvil de referencia: una app en producción con más de 700 usuarios activos y margen para seguir creciendo.',
+         metric: '+4,500 usuarios activos',
+         text: 'Es el caso móvil de referencia: una app en producción con más de 4.500 usuarios activos y margen para seguir creciendo.',
       },
    },
    {
@@ -131,7 +131,7 @@ export const CASES: Case[] = [
       thumb: 'e-commerce · captura',
       img: '/case-studies/app-emails.webp',
       result: 'Proveedores, pedidos incorrectos e incidencias de 10 tiendas, gestionados desde un único panel.',
-      metric: '[ 10 tiendas · 1 panel ]',
+      metric: '+10 tiendas · 1 panel',
       contexto: [
          'Un grupo de 10 tiendas e-commerce gestionaba proveedores, pedidos incorrectos e incidencias a través de bandejas de correo separadas, lo que hacía muy difícil tener una visión global.',
       ],
@@ -143,7 +143,7 @@ export const CASES: Case[] = [
          'Seguimiento por tienda, por proveedor y por estado de la incidencia.',
       ],
       resultado: {
-         metric: '[ 10 tiendas · 1 panel ]',
+         metric: '+10 tiendas · 1 panel',
          text: 'Una bandeja unificada para las 10 tiendas: menos correos perdidos y respuestas más rápidas a proveedores y clientes.',
       },
    },
