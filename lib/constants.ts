@@ -1,7 +1,7 @@
 import type { Brand, FooterColumn, NavLink, PainPoint, Testimonial, Topic } from './types';
 
 export const CAL_LINK = process.env.NEXT_PUBLIC_CAL_LINK || 'https://cal.com/adrichavero/30min';
-export const LINKEDIN_URL = '[URL LinkedIn]';
+export const LINKEDIN_URL = 'https://www.linkedin.com/in/adrichavero';
 
 export const NAV_LINKS: NavLink[] = [
    { label: 'Inicio', href: '/' },
@@ -9,7 +9,7 @@ export const NAV_LINKS: NavLink[] = [
    { label: 'Casos de éxito', href: '/casos-de-exito' },
 ];
 
-export const FOOTER_STATEMENT = 'de la idea al producto, sin intermediarios. software a medida desde Sevilla.';
+export const FOOTER_STATEMENT = 'de la idea al producto. software a medida desde Sevilla.';
 
 export const FOOTER_COLUMNS: FooterColumn[] = [
    {
@@ -112,4 +112,4 @@ export const LINKEDIN_TOPICS: Topic[] = [
 ];
 
 export const COPYRIGHT = '© 2026 Adri Chavero · Sevilla, España';
-export const BUILT_WITH = 'built with JetBrains Mono & ☕';
+export const BUILT_WITH = 'built with good ☕';
