@@ -7,6 +7,14 @@ export const CAL_EVENT_SLUG = process.env.CAL_EVENT_SLUG || '30min';
 
 export const isCalConfigured = () => CAL_API_KEY.length > 0;
 
+export const CAL_SERVICE_FIELD = 'interested_services';
+export const CAL_SERVICE_OPTIONS = [
+   'Aplicaciones web a medida',
+   'Integraciones y conexión de sistemas',
+   'Aplicaciones móviles',
+   'Mantenimiento y evolución web',
+] as const;
+
 export interface CalSlot {
    start: string;
 }

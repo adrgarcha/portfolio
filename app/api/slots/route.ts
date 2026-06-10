@@ -42,11 +42,13 @@ export async function GET(request: Request) {
 
       const json = await res.json();
       if (!res.ok) {
-         return NextResponse.json({ configured: true, error: json?.error?.message || 'Error al consultar disponibilidad', slots: {} }, { status: 502 });
+         console.error('[slots] cal error', json?.error?.message || res.statusText);
+         return NextResponse.json({ configured: true, error: 'No se pudo cargar la disponibilidad', slots: {} }, { status: 502 });
       }
 
       return NextResponse.json({ configured: true, slots: json?.data || {} });
-   } catch {
+   } catch (err) {
+      console.error('[slots] request failed', err);
       return NextResponse.json({ configured: true, error: 'No se pudo conectar con el calendario', slots: {} }, { status: 502 });
    }
 }

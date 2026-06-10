@@ -1152,6 +1152,29 @@
       font-size: 0.85rem;
       padding: 1rem 0;
    }
+   .cal-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+   }
+   .cal-chip {
+      border: 1px solid var(--border);
+      border-radius: var(--r-sm);
+      padding: 0.55em 0.85em;
+      font-size: 0.85rem;
+      color: var(--text);
+      background: var(--bg);
+      transition: var(--t-fast);
+   }
+   .cal-chip:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+   }
+   .cal-chip.active {
+      background: var(--accent-dim);
+      border-color: var(--accent);
+      color: var(--accent);
+   }
    .cal-field {
       display: flex;
       flex-direction: column;
