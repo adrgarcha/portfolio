@@ -16,18 +16,10 @@ export default function AvisoLegalPage() {
             datos del titular de este sitio web:
          </p>
          <ul>
-            <li>
-               Titular: <span className="ph-field">[NOMBRE Y APELLIDOS]</span>
-            </li>
-            <li>
-               NIF: <span className="ph-field">[NIF]</span>
-            </li>
-            <li>
-               Domicilio: <span className="ph-field">[DOMICILIO]</span>
-            </li>
-            <li>
-               Correo electrónico: <span className="ph-field">[EMAIL]</span>
-            </li>
+            <li>Titular: Adrián García Chavero</li>
+            <li>NIF: 45968205Z</li>
+            <li>Domicilio: Sevilla (España)</li>
+            <li>Correo electrónico: garciachaveroadrian@gmail.com</li>
             <li>Sitio web: adrichavero.com</li>
          </ul>
          <h2>2. Objeto</h2>

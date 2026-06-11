@@ -51,9 +51,6 @@ export default function CookieBanner() {
             <button className="btn btn-ghost" onClick={() => decide('reject')}>
                Rechazar
             </button>
-            <Link className="btn btn-ghost" href="/politica-de-cookies">
-               Configurar
-            </Link>
          </div>
       </div>
    );

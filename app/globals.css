@@ -1387,16 +1387,10 @@
    .prose li {
       margin-top: 0.4rem;
    }
-   .prose .ph-field {
-      color: var(--accent);
-   }
-   .legal-disclaimer {
-      border: 1px solid rgba(255, 122, 24, 0.3);
-      background: var(--accent-dim);
-      border-radius: var(--r-md);
-      padding: 1rem 1.2rem;
-      color: var(--text);
-      font-size: 0.88rem;
+   .legal-updated {
+      margin-top: 0.8rem;
+      color: var(--comment);
+      font-size: 0.82rem;
       font-weight: 300;
    }
 

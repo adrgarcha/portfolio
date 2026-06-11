@@ -18,16 +18,12 @@ export default function LegalShell({ crumb, title, children }: LegalShellProps) 
                <h1 className="t-1" style={{ marginTop: '0.6rem' }}>
                   {title}
                </h1>
+               <p className="legal-updated">Última actualización: 11 de junio de 2026</p>
             </div>
          </section>
          <section style={{ paddingBottom: 'clamp(56px, 8vw, 110px)' }}>
             <div className="wrap">
-               <div className="prose">
-                  <p className="legal-disclaimer">
-                     ⚠ Plantilla orientativa, no asesoramiento legal. Debe revisarse y completarse (campos entre corchetes) antes de publicar.
-                  </p>
-                  {children}
-               </div>
+               <div className="prose">{children}</div>
             </div>
          </section>
       </main>

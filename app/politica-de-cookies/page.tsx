@@ -19,13 +19,13 @@ export default function PoliticaCookiesPage() {
          <h2>2. Tipos de cookies que utiliza este sitio</h2>
          <ul>
             <li>Técnicas: necesarias para el funcionamiento del sitio. No requieren consentimiento.</li>
+            <li>Analíticas: PostHog, para entender de forma agregada cómo se usa el sitio. Requieren consentimiento.</li>
             <li>
-               Analíticas: <span className="ph-field">[analítica]</span> para entender de forma agregada cómo se usa el sitio. Requieren
+               Analítica sin cookies: Vercel Analytics mide el uso de forma agregada y anónima sin instalar cookies, por lo que no requiere
                consentimiento.
             </li>
             <li>
-               De terceros: el embed del calendario de <span className="ph-field">[Cal.com]</span> puede instalar cookies propias regidas por su
-               política.
+               De terceros: el embed del calendario de Cal.com puede instalar cookies propias regidas por su política.
             </li>
          </ul>
          <h2>3. Finalidad</h2>
