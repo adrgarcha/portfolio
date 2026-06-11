@@ -10,21 +10,22 @@ export const CASES: Case[] = [
       img: '/case-studies/plataforma-gimbal.webp',
       featured: true,
       result:
-         'Centraliza todas las peticiones de los clientes de la agencia en un único sitio: incidencias, nuevas funciones y prioridades, sin perder nada por el camino.',
+         'Centraliza todas las peticiones de los clientes de la agencia en un único sitio: incidencias, nuevas funciones, archivos y accesos, sin perder nada por el camino.',
       metric: '+62% peticiones resueltas a tiempo',
       contexto: [
-         'Una agencia de software gestionaba las peticiones de sus clientes por email, mensajes sueltos y hojas de cálculo. Las incidencias y las nuevas funciones se mezclaban y era difícil saber qué estaba pendiente y qué prioridad tenía cada cosa.',
+         'Una agencia de software con un equipo de 3-4 personas gestionaba entre 5 y 10 clientes a la vez, y lo llevaba todo por WhatsApp: las peticiones de los clientes y las tareas de los desarrolladores, mezcladas en las mismas conversaciones.',
+         'Habían probado un tablero de tareas, pero no llegó a encajar. Después de cuatro años así, las solicitudes, los archivos y los accesos se perdían por el camino.',
       ],
       reto: [
-         'Centralizar en un solo lugar todas las peticiones de todos los clientes de la agencia, con visibilidad para ambas partes y sin perder nada por el camino. Tenía que ser claro para el cliente final y útil para el equipo de la agencia.',
+         'Sacar toda la operación de WhatsApp y centralizar en un único lugar las solicitudes, archivos, permisos, accesos y servicios de cada cliente. Tenía que ser simple para que el cliente final lo adoptara sin fricción y potente para que el equipo tuviera el control de todo.',
       ],
       solucion: [
-         'Desarrollé una plataforma a medida donde cada cliente reporta incidencias y solicita nuevas funciones, y la agencia las prioriza, asigna y sigue su estado.',
-         'Roles diferenciados, historial por cliente y un panel general para que la agencia tenga el control de todo el trabajo en curso.',
+         'Desarrollé una plataforma a medida donde cada cliente reporta incidencias, solicita nuevas funciones y consulta sus archivos, accesos y servicios, mientras la agencia prioriza, asigna y sigue cada petición desde un panel general.',
+         'Integré un agente de IA que analiza y clasifica cada solicitud, e incluso resuelve por sí solo las de baja y media complejidad. Todo sobre una base mantenible y preparada para escalar.',
       ],
       resultado: {
          metric: '+62% peticiones resueltas a tiempo',
-         text: 'Una sola fuente de verdad para todas las peticiones. Menos cosas perdidas, prioridades claras y una relación más transparente con cada cliente.',
+         text: 'Una sola fuente de verdad para toda la operación. El equipo la adoptó de inmediato y los clientes, reticentes al principio, ya trabajan dentro y lo agradecen. En tres meses dejó de perderse trabajo por el camino.',
       },
    },
    {
@@ -37,14 +38,15 @@ export const CASES: Case[] = [
       result: 'Una empresa industrial genera presupuestos complejos en minutos.',
       metric: '−38% tiempo por presupuesto',
       contexto: [
-         'Una empresa industrial elaboraba presupuestos complejos a mano, combinando muchas variables, materiales y configuraciones. El proceso era lento y propenso a errores de cálculo.',
+         'Una empresa industrial elaboraba presupuestos combinando materiales, mano de obra y costes adicionales, cada uno con sus propias condiciones y reglas de precio.',
+         'Lo hacían sobre un sistema antiguo con una deuda técnica enorme y una interfaz tan poco intuitiva que solo unas pocas personas, de años usándola, sabían manejarla. Para alguien nuevo era prácticamente imposible.',
       ],
       reto: [
-         'Reducir drásticamente el tiempo de elaboración de un presupuesto y eliminar los errores manuales, manteniendo toda la complejidad de su catálogo y sus reglas de precio.',
+         'Trasladar toda la lógica de precios, con su enorme cantidad de casos concretos, a una herramienta nueva, clara y usable por cualquiera, sin perder un ápice de la complejidad del catálogo.',
       ],
       solucion: [
-         'Construí un módulo de cotización a medida que recoge las variables del producto y genera el presupuesto completo en minutos, con la lógica de precios de la empresa integrada.',
-         'Resultados consistentes, exportables y listos para enviar al cliente.',
+         'Construí un módulo de cotización a medida que recoge las variables del producto y genera el presupuesto completo en minutos, con toda la lógica de precios de la empresa integrada.',
+         'El mayor reto fue la mano de obra: se calcula de forma automática y en tiempo real a partir de muchísimos parámetros que se combinan entre sí. Resultados consistentes, exportables y listos para enviar al cliente.',
       ],
       resultado: {
          metric: '−38% tiempo por presupuesto',
@@ -58,45 +60,47 @@ export const CASES: Case[] = [
       tokens: [{ label: 'integración', accent: true }, { label: 'facturación' }],
       thumb: 'facturación · captura',
       img: '/case-studies/verifactu.webp',
-      result: 'Facturación conforme a la normativa española, integrada en el sistema existente.',
+      result: 'Facturación conforme a Verifactu, migrada fuera de un legacy en Windows 95.',
       metric: '100% facturas conformes a la normativa',
       contexto: [
-         'Un software industrial necesitaba adaptar su facturación a la normativa española vigente, integrándola en el sistema que ya usaban a diario.',
+         'El sistema de facturación de esta empresa industrial corría sobre una aplicación de escritorio nativa alojada en un único ordenador con Windows 95, conectado a una base de datos Oracle de más de 300 tablas.',
+         'Cada cambio obligaba a conectarse en remoto a esa máquina (lentísima) y tocar el código allí dentro. Y encima tenían un plazo legal encima: su facturación debía cumplir con Verifactu.',
       ],
       reto: [
-         'Cumplir con los requisitos de facturación conforme a la normativa sin romper el flujo de trabajo existente ni obligar al equipo a aprender una herramienta nueva.',
+         'Adaptar la facturación a Verifactu sin romper un sistema crítico de décadas y, a la vez, empezar a sacarlo de esa máquina antes de que la deuda técnica los bloqueara por completo.',
       ],
       solucion: [
-         'Integré la facturación conforme a la normativa directamente en el software existente, de forma transparente para el usuario.',
-         'Validaciones, registro y trazabilidad de cada factura según los requisitos legales.',
+         'En lugar de parchear el legacy, migré por completo el módulo de facturación al sistema nuevo, cumpliendo Verifactu de principio a fin: cada factura pasa por el servicio oficial, con validaciones, registro y trazabilidad.',
+         'Mantuve la compatibilidad con el sistema antiguo para no interrumpir la operación, dando el primer paso para abandonar esa dependencia del Windows 95.',
       ],
       resultado: {
          metric: '100% facturas conformes a la normativa',
-         text: 'Facturación conforme a la normativa desde el mismo sistema de siempre, sin fricción para el equipo.',
+         text: 'Facturación 100% conforme a Verifactu y lista para el plazo legal, por fin fuera del cuello de botella de la máquina antigua.',
       },
    },
    {
       slug: 'optica',
       title: 'Gestión de laboratorio para una óptica',
       shortTitle: 'Gestión de laboratorio para óptica',
-      tokens: [{ label: 'next.js', accent: true }, { label: 'supabase' }],
+      tokens: [{ label: 'next.js', accent: true }, { label: 'postgresql' }],
       thumb: 'laboratorio · captura',
       img: '/case-studies/entregafas.webp',
-      result: 'Clientes, productos y pedidos de laboratorio gestionados desde una sola app.',
-      metric: '−37% errores de pedido',
+      result: 'Por primera vez, un historial completo de cada cliente: graduaciones, gafas, pedidos y revisiones.',
+      metric: 'Historial 360° de cada cliente',
       contexto: [
-         'Una óptica gestionaba clientes, productos y pedidos de laboratorio con herramientas dispersas, lo que generaba descoordinación entre tienda y laboratorio.',
+         'Una óptica gestionaba a sus clientes sin ningún tipo de registro: no había historial de graduaciones, ni de gafas vendidas, ni de pedidos, ni de revisiones. No se guardaba nada.',
+         'Eso provocaba errores de graduación y hacía imposible entender el recorrido de cada cliente.',
       ],
       reto: [
-         'Unificar la gestión de clientes, productos y pedidos de laboratorio en una sola aplicación, reduciendo errores y tiempos de espera.',
+         'Dar a la tienda y al laboratorio una única herramienta para todo el ciclo: clientes, productos y pedidos de laboratorio; y, sobre todo, construir desde cero el historial de cada cliente.',
       ],
       solucion: [
-         'Desarrollé una aplicación a medida para gestionar el ciclo completo: alta de clientes, catálogo de productos y seguimiento de pedidos de laboratorio.',
-         'Estados claros de cada pedido y una visión compartida entre tienda y laboratorio.',
+         'Desarrollé una aplicación a medida para todo el proceso: ficha de cliente con su historial de graduaciones, gafas, pedidos y revisiones, catálogo de productos y seguimiento de los pedidos de laboratorio.',
+         'Estados claros de cada pedido y una visión compartida entre tienda y laboratorio para reducir los errores que obligaban a rehacer lentes.',
       ],
       resultado: {
-         metric: '−37% errores de pedido',
-         text: 'Una herramienta única para todo el proceso, con menos errores y mejor coordinación interna.',
+         metric: 'Historial 360° de cada cliente',
+         text: 'Pedidos y graduaciones mucho más precisos y, por primera vez, un control real del recorrido de cada cliente. Menos lentes que rehacer y menos costes de material y personal.',
       },
    },
    {
@@ -106,21 +110,21 @@ export const CASES: Case[] = [
       tokens: [{ label: 'react native', accent: true }, { label: 'expo' }, { label: 'móvil' }],
       thumb: 'golgorio · app móvil',
       img: '/case-studies/app-golgorio.webp',
-      result: 'App para organización deportiva, el caso móvil de referencia.',
-      metric: '+4,500 usuarios activos',
+      result: 'App para organizar fútbol amateur de principio a fin, el caso móvil de referencia.',
+      metric: '+4.500 usuarios activos al mes',
       contexto: [
-         'Golgorio es una startup deportiva que necesitaba una aplicación móvil para organizar su actividad y conectar con su comunidad de usuarios.',
+         'Golgorio es una startup deportiva que quería una app para organizar fútbol amateur de principio a fin: crear o unirse a equipos, encontrar pistas disponibles, reservarlas y dividir el pago entre los jugadores, todo desde el móvil.',
       ],
       reto: [
-         'Lanzar una app móvil sólida para iOS y Android que soportara el crecimiento de la comunidad y ofreciera una buena experiencia desde el primer día.',
+         'Levantar desde cero una app para iOS y Android capaz de sostener una comunidad creciente, integrándose con los sistemas de reserva de las pistas y con pagos individuales por jugador.',
       ],
       solucion: [
-         'Desarrollé la app móvil con React Native y Expo, una sola base de código para ambas plataformas, rápida de iterar y de publicar.',
-         'Funcionalidad orientada a la organización deportiva y al uso real de su comunidad.',
+         'Partí de los diseños y construí yo solo toda la base de la app con React Native y Expo: gestión de usuarios, equipos, búsqueda y reserva de pistas integrada con sus sistemas, y pagos divididos por jugador.',
+         'También desarrollé el panel de administración. Una sola base de código para ambas plataformas, rápida de iterar y publicar.',
       ],
       resultado: {
-         metric: '+4,500 usuarios activos',
-         text: 'Es el caso móvil de referencia: una app en producción con más de 4.500 usuarios activos y margen para seguir creciendo.',
+         metric: '+4.500 usuarios activos al mes',
+         text: 'Hoy es el caso móvil de referencia: una app en producción y en las stores oficiales, con más de 4.500 usuarios activos al mes alcanzados en dos años.',
       },
    },
    {
@@ -130,21 +134,22 @@ export const CASES: Case[] = [
       tokens: [{ label: 'integración', accent: true }, { label: 'e-commerce' }],
       thumb: 'e-commerce · captura',
       img: '/case-studies/app-emails.webp',
-      result: 'Proveedores, pedidos incorrectos e incidencias de 10 tiendas, gestionados desde un único panel.',
-      metric: '+10 tiendas · 1 panel',
+      result: 'Correos, pedidos e incidencias de 10 tiendas en 5 idiomas, gestionados desde un único panel con IA.',
+      metric: '10 tiendas · 5 idiomas · 1 panel',
       contexto: [
-         'Un grupo de 10 tiendas e-commerce gestionaba proveedores, pedidos incorrectos e incidencias a través de bandejas de correo separadas, lo que hacía muy difícil tener una visión global.',
+         'Un único cliente con 10 tiendas de gafas en WooCommerce, vendiendo a Francia, Italia, Alemania, Reino Unido y España. Cada tienda recibía una media de 50 correos al día (unos 500 en total) sobre proveedores, transportistas e incidencias de pedidos: gafas que llegaban rotas, del color equivocado o con la graduación incorrecta.',
+         'Todo repartido en bandejas separadas y en cinco idiomas distintos. Una locura.',
       ],
       reto: [
-         'Centralizar la gestión de proveedores, pedidos incorrectos e incidencias de las 10 tiendas en un único panel, sin perder el contexto de cada una.',
+         'Centralizar en un único panel los correos e incidencias de las 10 tiendas, cruzados con los datos de cada pedido, y resolver la barrera del idioma para que una sola persona pudiera gestionarlo todo desde español.',
       ],
       solucion: [
-         'Construí un sistema que unifica emails e incidencias de todas las tiendas, las clasifica y permite gestionarlas desde un solo lugar.',
-         'Seguimiento por tienda, por proveedor y por estado de la incidencia.',
+         'Construí un sistema que unifica los correos (vía IMAP) y los pedidos de cada tienda (vía la API de WooCommerce), todo configurable desde un panel de administración junto con las métricas de respuesta.',
+         'Integré los transportistas: DHL, Spring, FedEx, MRW y UPS; y una IA que traduce cada mensaje, redacta la respuesta y la envía en el idioma del cliente, aunque el gestor escriba siempre en español.',
       ],
       resultado: {
-         metric: '+10 tiendas · 1 panel',
-         text: 'Una bandeja unificada para las 10 tiendas: menos correos perdidos y respuestas más rápidas a proveedores y clientes.',
+         metric: '10 tiendas · 5 idiomas · 1 panel',
+         text: 'Una sola bandeja para las 10 tiendas, con toda la información del cliente y del pedido a mano. Con la respuesta ya redactada por IA y traducida, atender a proveedores y clientes pasó a ser prácticamente fricción cero.',
       },
    },
 ];
