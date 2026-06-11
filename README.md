@@ -1,21 +1,34 @@
 <h3 align="center">
     <br>
-    My personal portfolio 🚀
+    Adri Chavero — Desarrollo de software a medida 🚀
     <br><br>
-    <img src="./public/me.jpg" alt="A picture of myself" width="256" height="256">
+    <img src="./public/me.webp" alt="Retrato de Adri Chavero" width="256" height="256">
     <br><br>
 </h3>
 
-## Welcome 👋
+## Sobre el proyecto 👋
 
-I'm passionate about creating impactful software solutions 💻 and this portfolio showcases my journey as a developer.
+Mi portfolio personal. De la idea al producto: aplicaciones web y móviles a medida, hechas para resolver un problema concreto de tu negocio. Desde Sevilla.
 
-Here you'll find a collection of my projects, skills, and experiences that define my programming career ⚡. Feel free to explore and get to know more about my work and coding adventures! 🚀
+La web reúne mis servicios, mis casos de éxito reales y una agenda para hablar de tu proyecto en una videollamada de 30 minutos, sin compromiso.
 
-## Contributing 🤝
+## Stack 🛠️
 
-While this is my personal portfolio, I'm always open to new ideas and suggestions! Feel free to submit issues or share your thoughts ❤️. Any feedback that could help improve this portfolio is greatly appreciated!
+- **Framework**: Next.js (App Router) + React + TypeScript
+- **Datos / pagos**: PostgreSQL, Supabase, MongoDB, Stripe
+- **Móvil**: React Native + Expo
+- **Reservas**: integración con Cal.com
+- **Analítica**: Vercel Analytics + PostHog
 
-If you find any bugs or have suggestions for improvements, please don't hesitate to open an issue.
+## Desarrollo local 💻
 
-Thank you for taking the time to contribute! 💫
+```bash
+npm install
+npm run dev
+```
+
+La app queda disponible en `http://localhost:3000`.
+
+## Contacto 🤝
+
+¿Tienes un proyecto en mente? Hablemos: [adrichavero.com/agenda](https://adrichavero.com/agenda) · [LinkedIn](https://www.linkedin.com/in/adrichavero)
