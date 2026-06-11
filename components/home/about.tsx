@@ -20,7 +20,7 @@ export default function About() {
                   De un pueblo de Extremadura a tu proyecto.
                </h2>
                <p>
-                  Soy de <strong>Monesterio</strong>, un pueblo del sur de Extremadura, de una familia humilde donde no se mira a nadie
+                  Soy de <strong>Monesterio</strong>, un pueblo al sur de Extremadura, de una familia humilde donde no se mira a nadie
                   por encima del hombro. No fui de esos que con doce años ya programaban: me metí en esto porque mi padre me dijo que
                   tenía futuro, y la pasión la encontré después, ya en la carrera.
                </p>
