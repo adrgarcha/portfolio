@@ -55,8 +55,11 @@ export const CASES: Case[] = [
    },
    {
       slug: 'verifactu',
-      title: 'Verifactu en software industrial',
-      shortTitle: 'Verifactu en software industrial',
+      title: 'Software de facturación Verifactu para industria',
+      shortTitle: 'Facturación Verifactu para industria',
+      metaTitle: 'Software de facturación Verifactu',
+      metaDescription:
+         'Software de facturación Verifactu para una empresa industrial: facturación conforme a la normativa, con validaciones, registro y trazabilidad en cada factura.',
       tokens: [{ label: 'integración', accent: true }, { label: 'facturación' }],
       thumb: 'facturación · captura',
       img: '/case-studies/verifactu.webp',
@@ -70,7 +73,7 @@ export const CASES: Case[] = [
          'Adaptar la facturación a Verifactu sin romper un sistema crítico de décadas y, a la vez, empezar a sacarlo de esa máquina antes de que la deuda técnica los bloqueara por completo.',
       ],
       solucion: [
-         'En lugar de parchear el legacy, migré por completo el módulo de facturación al sistema nuevo, cumpliendo Verifactu de principio a fin: cada factura pasa por el servicio oficial, con validaciones, registro y trazabilidad.',
+         'En lugar de parchear el legacy, migré por completo el software de facturación al sistema nuevo, cumpliendo Verifactu de principio a fin: cada factura pasa por el servicio oficial, con validaciones, registro y trazabilidad.',
          'Mantuve la compatibilidad con el sistema antiguo para no interrumpir la operación, dando el primer paso para abandonar esa dependencia del Windows 95.',
       ],
       resultado: {
@@ -80,8 +83,11 @@ export const CASES: Case[] = [
    },
    {
       slug: 'optica',
-      title: 'Gestión de laboratorio para una óptica',
-      shortTitle: 'Gestión de laboratorio para óptica',
+      title: 'Software de gestión para una óptica',
+      shortTitle: 'Software de gestión para óptica',
+      metaTitle: 'Software para óptica a medida',
+      metaDescription:
+         'Software de gestión para óptica a medida: historial de cada cliente, graduaciones, pedidos de laboratorio y catálogo. Programa de gestión para ópticas hecho a medida.',
       tokens: [{ label: 'next.js', accent: true }, { label: 'postgresql' }],
       thumb: 'laboratorio · captura',
       img: '/case-studies/entregafas.webp',
@@ -95,7 +101,7 @@ export const CASES: Case[] = [
          'Dar a la tienda y al laboratorio una única herramienta para todo el ciclo: clientes, productos y pedidos de laboratorio; y, sobre todo, construir desde cero el historial de cada cliente.',
       ],
       solucion: [
-         'Desarrollé una aplicación a medida para todo el proceso: ficha de cliente con su historial de graduaciones, gafas, pedidos y revisiones, catálogo de productos y seguimiento de los pedidos de laboratorio.',
+         'Desarrollé un software de gestión para la óptica a medida que cubre todo el proceso: ficha de cliente con su historial de graduaciones y optometría, gafas vendidas, pedidos y revisiones, catálogo de productos y seguimiento de los pedidos de laboratorio.',
          'Estados claros de cada pedido y una visión compartida entre tienda y laboratorio para reducir los errores que obligaban a rehacer lentes.',
       ],
       resultado: {

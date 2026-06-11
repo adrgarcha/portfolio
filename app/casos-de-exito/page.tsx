@@ -9,6 +9,7 @@ import { CASES } from '@/lib/cases';
 export const metadata: Metadata = {
    title: 'Casos de éxito',
    description: 'Proyectos reales para empresas reales. Cada uno empezó por un problema concreto de negocio.',
+   alternates: { canonical: '/casos-de-exito' },
 };
 
 export default function CasosDeExitoPage() {

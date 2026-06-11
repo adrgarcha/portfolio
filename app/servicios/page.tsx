@@ -11,6 +11,7 @@ export const metadata: Metadata = {
    title: 'Servicios',
    description:
       'Desarrollo web a medida, integraciones, apps móviles y mantenimiento. Software hecho para resolver un problema concreto de tu negocio.',
+   alternates: { canonical: '/servicios' },
 };
 
 const [web, ...rest] = SERVICES;

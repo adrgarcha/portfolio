@@ -31,7 +31,8 @@ export default function About() {
                   mejoro el día a una persona, es justo lo que me mueve.
                </p>
                <p>
-                  Por eso me hice freelance: para tirar ese muro abajo. Para mí esto no va de entregarte un trabajo y desaparecer, sino de{' '}
+                  Por eso me hice freelance: para tirar ese muro abajo. Hoy trabajo como desarrollador web freelance en Sevilla, y
+                  para mí esto no va de entregarte un trabajo y desaparecer, sino de{' '}
                   <strong>preocuparme por tu producto como si fuera mío</strong>. Trabajando conmigo hablas claro y directo con quien
                   construye tu software, y yo veo de primera mano si te cambia las cosas. Sin intermediarios y sin sorpresas.
                </p>

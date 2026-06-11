@@ -42,7 +42,7 @@ export const SERVICES: Service[] = [
       href: '/servicios#integraciones',
       num: '02',
       problem:
-         '¿Tu tienda online no se entiende con tu programa de facturación? ¿El ERP por un lado, los pedidos por otro y tú en medio pasando datos a mano? Conecto tus herramientas para que la información viaje sola de una a otra y dejes de hacer tú de puente.',
+         '¿Tu tienda online no se entiende con tu programa de facturación? ¿El ERP por un lado, los pedidos por otro y tú en medio pasando datos a mano? Integro tu tienda online con el ERP y conecto tus herramientas para que la información viaje sola de una a otra y dejes de hacer tú de puente.',
       includes: [
          'Conexión con e-commerce (Shopify, WooCommerce, PrestaShop…)',
          'Sincronización con ERPs y software de facturación',

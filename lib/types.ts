@@ -49,6 +49,8 @@ export interface Case {
    slug: string;
    title: string;
    shortTitle: string;
+   metaTitle?: string;
+   metaDescription?: string;
    tokens: ServiceToken[];
    thumb: string;
    img?: string;

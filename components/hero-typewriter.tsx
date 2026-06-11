@@ -10,18 +10,18 @@ const CHAR_DELAY = 38;
 const CARET_FADE = 1400;
 
 export default function HeroTypewriter({ text }: HeroTypewriterProps) {
-   const [typed, setTyped] = useState('');
-   const [done, setDone] = useState(false);
+   // Initial state renders the full text so it is present in the server-rendered HTML (crawlable);
+   // the client restarts it as a typed animation after mount.
+   const [typed, setTyped] = useState(text);
+   const [done, setDone] = useState(true);
 
    // useEffect required: timed character reveal is a client-only animation over the mounted node.
    useEffect(() => {
       const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      if (prefersReduced) {
-         setTyped(text);
-         setDone(true);
-         return;
-      }
+      if (prefersReduced) return;
 
+      setTyped('');
+      setDone(false);
       let i = 0;
       const timers: ReturnType<typeof setTimeout>[] = [];
       const tick = () => {

@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 
 import CtaBand from '@/components/cta-band';
 import Breadcrumb from '@/components/breadcrumb';
+import JsonLd, { caseArticleSchema } from '@/components/json-ld';
 import Tokens from '@/components/tokens';
 import { CASES, getCase } from '@/lib/cases';
 
@@ -20,8 +21,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
    const item = getCase(slug);
    if (!item) return {};
    return {
-      title: item.shortTitle,
-      description: item.result,
+      title: item.metaTitle || item.shortTitle,
+      description: item.metaDescription || item.result,
+      alternates: { canonical: `/casos-de-exito/${slug}` },
    };
 }
 
@@ -32,6 +34,7 @@ export default async function CaseDetailPage({ params }: PageProps) {
 
    return (
       <main>
+         <JsonLd data={caseArticleSchema(item)} />
          <section className="page-head detail-hero">
             <div className="wrap">
                <Breadcrumb

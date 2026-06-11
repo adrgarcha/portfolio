@@ -7,11 +7,11 @@ export default function Hero() {
       <section className="hero">
          <div className="wrap hero-grid">
             <div className="hero-copy">
-               <p className="hero-meta">
+               <h1 className="hero-meta">
                   <span className="prompt"></span>
-                  <HeroTypewriter text="adri_chavero · desarrollo a medida" />
-               </p>
-               <h1 className="h-hero">Tú me cuentas el problema. Yo te entrego el software que lo resuelve.</h1>
+                  <HeroTypewriter text="Desarrollo de software a medida en Sevilla" />
+               </h1>
+               <p className="h-hero">Tú me cuentas el problema. Yo te entrego el software que lo resuelve.</p>
                <p className="lede">
                   Hecho para resolver un problema concreto de tu negocio. Tratas solamente conmigo de principio a fin.
                </p>

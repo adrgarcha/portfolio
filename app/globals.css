@@ -296,6 +296,14 @@
    .link-arrow:hover .arrow {
       transform: translateX(4px);
    }
+   .text-link {
+      color: var(--accent);
+      font-weight: 500;
+   }
+   .text-link:hover {
+      color: var(--accent-hover);
+      text-decoration: underline;
+   }
 
    /* ---------- cards ---------- */
    .card {
@@ -434,6 +442,7 @@
       gap: 0.8ch;
       flex-wrap: wrap;
       margin-bottom: 1.6rem;
+      text-transform: lowercase;
    }
    .hero-meta .prompt::before {
       color: var(--accent);
@@ -442,7 +451,7 @@
       color: var(--text);
       font-weight: 500;
    }
-   .hero h1 {
+   .hero .h-hero {
       margin-bottom: 1.4rem;
    }
    .hero h1 .tw-caret,

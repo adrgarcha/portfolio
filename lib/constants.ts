@@ -18,6 +18,7 @@ export const FOOTER_COLUMNS: FooterColumn[] = [
          { label: 'Inicio', href: '/' },
          { label: 'Servicios', href: '/servicios' },
          { label: 'Casos de éxito', href: '/casos-de-exito' },
+         { label: 'Desarrollador web en Sevilla', href: '/desarrollador-web-sevilla' },
          { label: 'Agenda', href: '/agenda' },
       ],
    },
@@ -112,4 +113,4 @@ export const LINKEDIN_TOPICS: Topic[] = [
 ];
 
 export const COPYRIGHT = '© 2026 Adri Chavero · Sevilla, España';
-export const BUILT_WITH = 'built with good ☕';
+export const BUILT_WITH = 'built with good coffee';
