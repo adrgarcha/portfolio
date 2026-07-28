@@ -1,22 +1,27 @@
-import Link from 'next/link';
+import { getTranslations } from 'next-intl/server';
+
+import { Link } from '@/i18n/navigation';
 
 import Booker from '@/components/booker/booker';
 import Reveal from '@/components/reveal';
 
-export default function AgendaSection() {
+export default async function AgendaSection() {
+   const t = await getTranslations('home.agenda');
+   const tCommon = await getTranslations('common');
+
    return (
       <section className="section-pad" id="agenda">
          <div className="wrap">
             <Reveal className="sec-head" >
                <div style={{ textAlign: 'center' }}>
                   <span className="eyebrow" style={{ justifyContent: 'center' }}>
-                     hablemos de tu proyecto
+                     {t('eyebrow')}
                   </span>
                   <h2 className="t-1" style={{ marginTop: '0.6rem' }}>
-                     Cuéntame qué necesitas.
+                     {t('heading')}
                   </h2>
                   <p className="lede" style={{ marginInline: 'auto' }}>
-                     30 minutos, sin compromiso. Me cuentas tu problema y vemos juntos si puedo ayudarte.
+                     {t('lede')}
                   </p>
                </div>
             </Reveal>
@@ -26,7 +31,7 @@ export default function AgendaSection() {
             <Reveal>
                <div style={{ textAlign: 'center', marginTop: '2rem' }}>
                   <Link className="btn btn-primary btn-lg" href="/agenda">
-                     Agenda una reunión
+                     {tCommon('bookMeetingCta')}
                   </Link>
                </div>
             </Reveal>

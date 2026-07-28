@@ -1,14 +1,18 @@
+import { getTranslations } from 'next-intl/server';
+
 import Reveal from '@/components/reveal';
 import { TECH_STACK } from '@/lib/constants';
 
-export default function TechStack() {
+export default async function TechStack() {
+   const t = await getTranslations('home.techStack');
+
    return (
       <section className="section-pad">
          <div className="wrap">
             <Reveal className="sec-head">
-               <span className="kicker">las herramientas con las que construyo</span>
+               <span className="kicker">{t('kicker')}</span>
                <h2 className="t-2" style={{ marginTop: '0.6rem' }}>
-                  Stack
+                  {t('heading')}
                </h2>
             </Reveal>
             <Reveal className="stack-row">

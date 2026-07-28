@@ -1,16 +1,12 @@
-import type { Metadata } from 'next';
+import { getTranslations } from 'next-intl/server';
 
 import CookieConfigButton from '@/components/cookie-config-button';
-import LegalShell from '@/components/legal-shell';
 
-export const metadata: Metadata = {
-   title: 'Política de cookies',
-   robots: { index: false },
-};
+export default async function CookiePolicyEs() {
+   const t = await getTranslations('legal');
 
-export default function PoliticaCookiesPage() {
    return (
-      <LegalShell crumb="política de cookies" title="Política de cookies">
+      <>
          <h2>1. Qué son las cookies</h2>
          <p>
             Las cookies son pequeños archivos que se descargan en tu dispositivo al visitar determinadas páginas y permiten, entre otras cosas,
@@ -38,8 +34,8 @@ export default function PoliticaCookiesPage() {
             configuración de tu navegador.
          </p>
          <p style={{ marginTop: '1.4rem' }}>
-            <CookieConfigButton label="Abrir configuración de cookies" className="btn btn-ghost" />
+            <CookieConfigButton label={t('cookiePolicy.openSettings')} className="btn btn-ghost" />
          </p>
-      </LegalShell>
+      </>
    );
 }

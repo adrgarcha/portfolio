@@ -1,0 +1,439 @@
+{
+   "common": {
+      "skipToContent": "Skip to content",
+      "breadcrumbHome": "home",
+      "breadcrumbAriaLabel": "breadcrumb",
+      "bookMeetingCta": "Book a call",
+      "viewCase": "View case",
+      "featuredCaseBadge": "featured case",
+      "viewDetail": "View details"
+   },
+   "nav": {
+      "brandAriaLabel": "adri_chavero — home",
+      "primaryAriaLabel": "primary",
+      "closeMenu": "Close menu",
+      "openMenu": "Open menu",
+      "links": {
+         "home": "Home",
+         "services": "Services",
+         "cases": "Case studies"
+      },
+      "languageSwitcherLabel": "Language switcher",
+      "switchLanguage": "Switch to Spanish"
+   },
+   "localeNotice": {
+      "body": "Looks like you speak English. You can switch to the <link>English site anytime ;) →</link>",
+      "dismiss": "Dismiss"
+   },
+   "footer": {
+      "statement": "from idea to product. custom software, based in Spain.",
+      "copyright": "© 2026 Adri Chavero · Seville, Spain",
+      "builtWith": "built with good coffee",
+      "brandLine": "Custom web and mobile app development.",
+      "followLinkedin": "Follow me on LinkedIn",
+      "cookieSettings": "Cookie settings",
+      "columns": {
+         "navigation": {
+            "title": "navigation",
+            "links": {
+               "home": "Home",
+               "services": "Services",
+               "cases": "Case studies",
+               "sevilla": "Web developer in Seville",
+               "booking": "Book a call"
+            }
+         },
+         "services": {
+            "title": "services",
+            "links": {
+               "web": "Web applications",
+               "integrations": "Integrations",
+               "mobile": "Mobile apps",
+               "maintenance": "Maintenance"
+            }
+         },
+         "legal": {
+            "title": "legal",
+            "links": {
+               "notice": "Legal notice",
+               "privacy": "Privacy",
+               "cookies": "Cookies"
+            }
+         }
+      }
+   },
+   "pains": {
+      "eyebrow": "how I can help",
+      "heading": "If any of this sounds familiar, let's talk.",
+      "items": [
+         {
+            "n": "// 01",
+            "question": "Do you have a manual process eating up your hours and need a tool built around it?",
+            "answer": "I turn that spreadsheet or copy-paste workflow into software that does the work for you."
+         },
+         {
+            "n": "// 02",
+            "question": "Does your current software fail to talk to your other tools (ERP, e-commerce, invoicing)?",
+            "answer": "I connect your systems so data flows on its own, with no double entry and no errors."
+         },
+         {
+            "n": "// 03",
+            "question": "Do you need an app so your team or your clients can work better?",
+            "answer": "I design and build mobile apps made for real day-to-day use."
+         },
+         {
+            "n": "// 04",
+            "question": "Do you have something already built that keeps breaking and nobody maintains?",
+            "answer": "I review it, stabilize it, and evolve what you already have so it stops giving you surprises."
+         }
+      ]
+   },
+   "testimonials": {
+      "eyebrow": "testimonials",
+      "heading": "What people who've worked with me say.",
+      "items": [
+         {
+            "quote": "Everything looks great Adrián, I really like what you're doing with the app. Really cool.",
+            "role": "Project Manager · Bim Consulting"
+         },
+         {
+            "quote": "Congrats Adri, you're doing a great job.",
+            "role": "CEO · Gimbal Project"
+         }
+      ]
+   },
+   "linkedin": {
+      "eyebrow": "find me on linkedin talking about",
+      "heading": "I share what I learn building.",
+      "followLinkedin": "Follow me on LinkedIn",
+      "topics": [
+         { "text": "Custom software development", "meta": "post" },
+         { "text": "Integrations that save hours of work", "meta": "post" },
+         { "text": "The day-to-day of a freelance developer", "meta": "post" },
+         { "text": "Tools and tricks for devs", "meta": "post" }
+      ]
+   },
+   "services": {
+      "homeEyebrow": "services",
+      "homeHeading": "What I build for your business.",
+      "homeLede": "Custom web development is the core. Around it, everything your software needs to run, grow, and stay well maintained.",
+      "items": {
+         "web": {
+            "title": "Custom web applications",
+            "lead": "Software built to fit exactly how you work, not the other way around.",
+            "bullets": [
+               "Internal tools that replace spreadsheets and manual processes",
+               "Dashboards, back-office systems, and platforms built around your operation",
+               "Clean, fast architecture ready to grow"
+            ],
+            "kicker": "core service",
+            "problem": "Right now you're running on spreadsheets, copy-pasting between tools, and repeating the same tasks every week. It works... until it doesn't. I build an application shaped exactly to your process, one that handles that repetitive work for you.",
+            "howIWork": "I start by understanding your real problem, not a feature list. I build in phases and show you progress early, so we adjust based on something you can actually use, not a document. I stay close throughout the whole process.",
+            "includes": [
+               "Internal tools that replace manual processes",
+               "Management dashboards, back-office systems, and custom platforms",
+               "Role-based access and permissions for your team",
+               "Clean, fast architecture ready to grow",
+               "Deployment, launch, and ongoing support"
+            ],
+            "tokens": ["next.js", "react"],
+            "detailTokens": ["next.js", "react", "typescript", "postgresql"]
+         },
+         "integraciones": {
+            "title": "Integrations and system connections",
+            "lead": "Get your tools talking to each other and stop duplicating work.",
+            "bullets": [
+               "Connections with e-commerce, ERPs, and invoicing software",
+               "Syncing orders, stock, customers, and payments",
+               "APIs and data automation between platforms"
+            ],
+            "problem": "Does your online store not talk to your invoicing software? Is the ERP on one side, orders on the other, and you in the middle moving data by hand? I integrate your online store with your ERP and connect your tools so information moves on its own, and you stop being the bridge.",
+            "includes": [
+               "Connections with e-commerce platforms (Shopify, WooCommerce, PrestaShop…)",
+               "Syncing with ERPs and invoicing software",
+               "Payment gateways and reconciliation",
+               "Automating data flow between platforms"
+            ],
+            "tokens": ["integration", "stripe"],
+            "detailTokens": ["integration", "apis", "stripe", "webhooks"]
+         },
+         "movil": {
+            "title": "Mobile applications",
+            "lead": "Apps so your team or your clients can work better, wherever they are.",
+            "bullets": [
+               "iOS and Android apps from a single codebase",
+               "For internal team use or client-facing use",
+               "Fast to ship and easy to maintain"
+            ],
+            "problem": "Your team works in the field with a phone in hand, or your clients want your service one tap away, in their pocket. I build the app for iOS and Android from a single codebase, fast to ship and maintain, without duplicating effort for each platform.",
+            "includes": [
+               "Internal apps for your team",
+               "Client-facing apps",
+               "App Store and Google Play publishing",
+               "Notifications, profiles, and cloud sync"
+            ],
+            "tokens": ["react native", "expo"],
+            "detailTokens": ["react native", "expo", "ios", "android"]
+         },
+         "mantenimiento": {
+            "title": "Maintenance and ongoing development",
+            "lead": "Keep what you already have running, stable, and improving.",
+            "bullets": [
+               "Stabilizing projects that keep failing or that nobody maintains",
+               "Continuous improvements, new features, and performance work",
+               "Long-term technical support"
+            ],
+            "problem": "You have something built that breaks, runs slow, or that nobody maintains anymore, and a new issue shows up every week. I review it thoroughly, stabilize it, and evolve it with you so it stops giving you surprises and you can trust it again.",
+            "includes": [
+               "Auditing and stabilizing existing projects",
+               "Bug fixes and performance improvements",
+               "New features and continuous evolution",
+               "Long-term technical support"
+            ],
+            "tokens": ["maintenance", "support"],
+            "detailTokens": ["maintenance", "support", "performance"]
+         }
+      }
+   },
+   "servicesPage": {
+      "metaTitle": "Services",
+      "metaDescription": "Custom web development, integrations, mobile apps, and maintenance. Software built to solve a specific problem in your business.",
+      "breadcrumbLabel": "services",
+      "eyebrow": "services",
+      "title": "How I help you solve the problem.",
+      "lede": "I work directly, one on one: I understand your business, tell you what's possible, and build software you actually use. No middlemen, no fluff, no fixed catalog pricing.",
+      "howIWorkLabel": "how I work",
+      "includesLabel": "what's included",
+      "ctaHeading": "Which of these is your case?",
+      "ctaLede": "Tell me about it in a 30-minute call. No commitment, we just talk through what you need."
+   },
+   "casesPage": {
+      "metaTitle": "Case studies",
+      "metaDescription": "Real projects for real businesses. Each one started from a specific business problem.",
+      "breadcrumbLabel": "case studies",
+      "eyebrow": "case studies",
+      "title": "Software that's already running.",
+      "lede": "Real projects for real businesses. Each one started from a specific business problem and ended up as something people use every day.",
+      "ctaHeading": "Could your project be next?",
+      "ctaLede": "Tell me what you need in a 30-minute call, no commitment."
+   },
+   "caseDetail": {
+      "eyebrow": "case study",
+      "context": "Context",
+      "challenge": "The challenge",
+      "solution": "What I did",
+      "outcome": "Outcome",
+      "ctaHeading": "Have a similar challenge?",
+      "ctaLede": "Let's talk for 30 minutes, no commitment. I'll tell you if I can help.",
+      "backLink": "View all cases"
+   },
+   "sevilla": {
+      "metaTitle": "Web Developer in Seville",
+      "metaDescription": "Freelance web developer in Seville. Custom software, web applications, online stores, and integrations for small businesses in Seville and Andalusia.",
+      "breadcrumbLabel": "web developer in seville",
+      "eyebrow": "web developer · seville",
+      "title": "Freelance Web Developer in Seville",
+      "lede": "I'm Adri Chavero. I build custom software for small businesses across Seville and all of Andalusia: web applications, online stores, and integrations that solve a specific problem, not generic templates.",
+      "whatIDo": {
+         "eyebrow": "what I do",
+         "heading": "Custom web development, from idea to product",
+         "p1": "Web application development in Seville is usually sold off the shelf: a template, a few tweaks, and off you go. I work the other way around. First I understand your business and the problem eating up your time, then I design and build the software that solves it.",
+         "p2": "I build custom web applications, management dashboards, integrations between your systems (ERP, e-commerce, invoicing), and online store development in Seville when what you need is to sell. One person from start to finish: you talk directly to me, no middlemen, no surprises."
+      },
+      "forWhom": {
+         "eyebrow": "who it's for",
+         "heading": "Built for businesses in Seville and Andalusia",
+         "p1": "I mostly work with small businesses, freelancers, and companies in Seville and the surrounding area that already have a manual process or a tool they've outgrown. If you're running your operation on spreadsheets, WhatsApp, and copy-paste, that's where custom web development makes the difference.",
+         "list": [
+            "Web applications and management dashboards for your daily operations",
+            "Online store development in Seville, connected to your systems",
+            "Integrations between ERP, e-commerce, and invoicing",
+            "Maintenance and ongoing development of what you already have running"
+         ],
+         "p2": "I don't focus on a single industry: what my projects have in common is that they all start from a real business problem. I've worked with industrial companies, opticians, agencies, and startups, and in every case the starting point was the same: an operation running on spreadsheets, emails, and manual processes that had reached their limit."
+      },
+      "howIWork": {
+         "eyebrow": "how I work",
+         "heading": "You talk directly to me, start to finish",
+         "p1": "I don't subcontract, and I won't pass you from a salesperson to a project manager to an intern. The web development you're hiring is done by me: the same person who understands your business is the one writing the code and the one who picks up the phone when something breaks.",
+         "p2": "I work in phases and show you progress early, on something you can actually use, not a hundred-page document. That way we adjust fast and you don't get surprises at the end. Once we launch, I stay close to maintain it and grow it with you. I'm based in Seville, so we can also meet in person if you prefer, though most of the work runs smoothly remote."
+      },
+      "cases": {
+         "eyebrow": "cases",
+         "heading": "Real projects, right nearby",
+         "intro": "A few examples: <optica>management software for an optician</optica>, <verifactu>Verifactu-compliant invoicing software</verifactu> (Verifactu is Spain's e-invoicing regulation) for an industrial company, or a <cotizadora>custom quoting tool</cotizadora> that generates quotes in minutes."
+      },
+      "cta": {
+         "heading": "Need a web developer in Seville?",
+         "lede": "Tell me about your project in a 30-minute call, no commitment. I'll tell you if I can help."
+      }
+   },
+   "meta": {
+      "site": {
+         "title": "Adri Chavero — Custom Software Development",
+         "titleTemplate": "%s · Adri Chavero",
+         "description": "I build custom web and mobile software, from idea to product, for businesses across Europe and the US. EU-based, full overlap with European working hours, direct contact with the engineer who writes the code.",
+         "ogTitle": "Adri Chavero — Custom Software Development",
+         "ogDescription": "Custom web and mobile applications built to solve a specific problem in your business. EU-based, one engineer, no handoffs.",
+         "twitterDescription": "Custom web and mobile app development. EU-based, one engineer, direct."
+      },
+      "pages": {
+         "home": {
+            "title": "Freelance Software Engineer (EU-based) · Custom Software | Adri Chavero",
+            "description": "Freelance software engineer based in Spain, building custom web and mobile applications for businesses across Europe and the US. One person, from idea to product."
+         }
+      }
+   },
+   "home": {
+      "hero": {
+         "typewriterText": "Custom software development, EU-based",
+         "heading": "You tell me the problem. I deliver the software that solves it.",
+         "lede": "Built to solve a specific problem in your business. You work directly with me from start to finish.",
+         "note": "30 min · no commitment",
+         "portraitAlt": "Portrait of Adri Chavero, full-stack developer"
+      },
+      "about": {
+         "eyebrow": "about me",
+         "heading": "From a small town in Extremadura to your project.",
+         "portraitAlt": "Monesterio, the town in Extremadura where Adri Chavero grew up",
+         "portraitPlaceholder": "photo · Extremadura",
+         "paragraph1": "I'm from <b>Monesterio</b>, a small town in southern Extremadura, from a working-class family where nobody looks down on anyone. I wasn't one of those kids coding at twelve: I got into this because my father told me it had a future, and I found the passion for it later, in college.",
+         "paragraph2": "What came after taught me mostly what kind of work I <b>didn't</b> want. At every company I worked for, there was a wall between me and the people who actually used what I built: a middleman, a process, always something in the way. I worked half-blind, never really knowing if what I made helped anyone. And it turns out that's exactly what drives me: knowing I made someone's day easier.",
+         "paragraph3": "That's why I went freelance: to tear that wall down. Today I work as a freelance software engineer based in Spain, and to me this isn't about delivering a project and disappearing, it's about <b>caring about your product as if it were mine</b>. Working with me, you talk directly and clearly with the person building your software, and I see firsthand whether it's actually changing things for you. No middlemen, no surprises."
+      },
+      "cases": {
+         "eyebrow": "case studies",
+         "heading": "Software that's already running.",
+         "lede": "Real projects for real businesses: software their teams use every day to work better.",
+         "viewAllLabel": "View all 6 cases"
+      },
+      "techStack": {
+         "kicker": "the tools I build with",
+         "heading": "Stack"
+      },
+      "logos": {
+         "kicker": "brands I've worked with",
+         "heading": "Trusted by"
+      },
+      "agenda": {
+         "eyebrow": "let's talk about your project",
+         "heading": "Tell me what you need.",
+         "lede": "30 minutes, no commitment. Tell me about your problem and we'll see together if I can help."
+      }
+   },
+   "booking": {
+      "serviceOptions": {
+         "web": "Custom web applications",
+         "integrations": "Integrations and system connections",
+         "mobile": "Mobile applications",
+         "maintenance": "Maintenance and ongoing development"
+      },
+      "page": {
+         "metaTitle": "Book a call",
+         "metaDescription": "Book a 30-minute video call, no commitment. Tell me what you need and I'll tell you if and how I can help.",
+         "breadcrumbLabel": "book a call",
+         "eyebrow": "book a call",
+         "heading": "Let's talk about your project.",
+         "lede": "A <strong>30-minute video call, no commitment</strong>. Tell me what you need, I'll ask the right questions, and I'll tell you honestly if and how I can help.",
+         "footnote": "what to expect: a conversation, not a sales pitch. You'll leave with a clear idea of next steps."
+      },
+      "booker": {
+         "whoStatus": "adri_chavero · available",
+         "meetingTitle": "30-min meeting",
+         "meta": {
+            "duration": "30 minutes",
+            "videocall": "Video call",
+            "noCommitment": "No commitment",
+            "timezone": "Times shown in your time zone ({tz})"
+         },
+         "connectedNote": "booking connected in real time with Cal.com",
+         "notConfigured": {
+            "message": "The calendar will be connected soon.",
+            "openCalendar": "Open calendar"
+         },
+         "prevMonth": "Previous month",
+         "nextMonth": "Next month",
+         "slots": {
+            "forDate": "// slots · {date}",
+            "chooseDay": "// choose a day",
+            "loading": "loading availability…",
+            "noSlotsThisDay": "no slots this day, try another.",
+            "selectDay": "select an available day to see time slots."
+         },
+         "months": [
+            "January",
+            "February",
+            "March",
+            "April",
+            "May",
+            "June",
+            "July",
+            "August",
+            "September",
+            "October",
+            "November",
+            "December"
+         ],
+         "dow": ["M", "T", "W", "T", "F", "S", "S"]
+      },
+      "form": {
+         "back": "‹ back to calendar",
+         "name": "Name",
+         "email": "Email",
+         "serviceQuestion": "Which service are you interested in?",
+         "notesQuestion": "What would you like to talk about? (optional)",
+         "submitting": "Booking…",
+         "submit": "Confirm meeting",
+         "confirmed": {
+            "title": "✓ Meeting confirmed",
+            "message": "I've sent the confirmation to <b>{email}</b> for {date} at {time}.",
+            "note": "See you on the call. You'll receive the link by email."
+         },
+         "errors": {
+            "not_configured": "The calendar isn't configured yet.",
+            "rate_limited": "Too many bookings in a row. Wait a moment and try again.",
+            "invalid_request": "Invalid request.",
+            "missing_fields": "Name, email, and time are required.",
+            "too_long": "The name or email is too long.",
+            "invalid_email": "The email doesn't look valid.",
+            "no_service_selected": "Select at least one service",
+            "cal_unavailable": "Couldn't create the booking. Please try again in a moment.",
+            "connection_failed": "Couldn't connect. Please try again.",
+            "unknown": "Something went wrong. Please try again."
+         }
+      }
+   },
+   "schema": {
+      "name": "Adri Chavero — Custom Software Development",
+      "description": "Freelance software engineer based in Spain (EU) specialized in custom software: web and mobile applications, integrations, and maintenance.",
+      "knowsAbout": ["Custom Software Development", "Web Applications", "Mobile Applications", "Systems Integration", "Verifactu"]
+   },
+   "legal": {
+      "eyebrow": "legal",
+      "updatedPrefix": "Last updated",
+      "prevalenceNotice": "This is a courtesy translation. In case of any discrepancy, <link>the Spanish version</link> of this document is the legally binding one.",
+      "legalNotice": {
+         "metaTitle": "Legal Notice",
+         "breadcrumbLabel": "legal notice",
+         "title": "Legal Notice"
+      },
+      "privacyPolicy": {
+         "metaTitle": "Privacy Policy",
+         "breadcrumbLabel": "privacy policy",
+         "title": "Privacy Policy"
+      },
+      "cookiePolicy": {
+         "metaTitle": "Cookie Policy",
+         "breadcrumbLabel": "cookie policy",
+         "title": "Cookie Policy",
+         "openSettings": "Open cookie settings"
+      }
+   },
+   "cookies": {
+      "ariaLabel": "Cookie consent",
+      "heading": "cookies",
+      "body": "I use technical cookies and, if you accept them, analytics cookies and cookies from the Cal.com calendar to improve your experience. You can read more in the <link>cookie policy</link>.",
+      "accept": "Accept",
+      "reject": "Reject"
+   }
+}

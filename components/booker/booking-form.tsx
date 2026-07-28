@@ -2,6 +2,7 @@
 
 import posthog from 'posthog-js';
 import { useState } from 'react';
+import { useTranslations } from 'next-intl';
 
 import { CAL_SERVICE_OPTIONS } from '@/lib/cal';
 import { formatDateLong, formatTime } from '@/lib/datetime';
@@ -9,11 +10,26 @@ import { formatDateLong, formatTime } from '@/lib/datetime';
 interface BookingFormProps {
    slot: string;
    onBack: () => void;
+   locale: string;
+   timeZone: string;
 }
 
 type Status = 'idle' | 'loading' | 'success' | 'error';
 
-export default function BookingForm({ slot, onBack }: BookingFormProps) {
+const ERROR_MESSAGE_KEYS: Record<string, string> = {
+   not_configured: 'errors.not_configured',
+   rate_limited: 'errors.rate_limited',
+   invalid_request: 'errors.invalid_request',
+   missing_fields: 'errors.missing_fields',
+   too_long: 'errors.too_long',
+   invalid_email: 'errors.invalid_email',
+   no_service_selected: 'errors.no_service_selected',
+   cal_unavailable: 'errors.cal_unavailable',
+};
+
+export default function BookingForm({ slot, onBack, locale, timeZone }: BookingFormProps) {
+   const t = useTranslations('booking.serviceOptions');
+   const tForm = useTranslations('booking.form');
    const [name, setName] = useState('');
    const [email, setEmail] = useState('');
    const [services, setServices] = useState<string[]>([]);
@@ -28,7 +44,7 @@ export default function BookingForm({ slot, onBack }: BookingFormProps) {
    const submit = async (e: React.FormEvent) => {
       e.preventDefault();
       if (services.length === 0) {
-         setError('Selecciona al menos un servicio');
+         setError(tForm('errors.no_service_selected'));
          setStatus('error');
          return;
       }
@@ -38,12 +54,14 @@ export default function BookingForm({ slot, onBack }: BookingFormProps) {
          const res = await fetch('/api/bookings', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ start: slot, name, email, notes, services }),
+            body: JSON.stringify({ start: slot, name, email, notes, services, timeZone, locale }),
          });
          const json = await res.json();
          if (!res.ok) {
-            const errorMessage = json.error || 'No se pudo crear la reserva';
-            posthog.capture('booking_failed', { error: errorMessage, slot });
+            const errorCode = json.error as string | undefined;
+            const messageKey = ERROR_MESSAGE_KEYS[errorCode || ''] || 'errors.unknown';
+            const errorMessage = tForm(messageKey as Parameters<typeof tForm>[0]);
+            posthog.capture('booking_failed', { error: errorCode || 'unknown', slot });
             setError(errorMessage);
             setStatus('error');
             return;
@@ -51,7 +69,7 @@ export default function BookingForm({ slot, onBack }: BookingFormProps) {
          posthog.capture('booking_created', { source: 'booker' });
          setStatus('success');
       } catch {
-         setError('No se pudo conectar. Inténtalo de nuevo.');
+         setError(tForm('errors.connection_failed'));
          setStatus('error');
       }
    };
@@ -59,12 +77,16 @@ export default function BookingForm({ slot, onBack }: BookingFormProps) {
    if (status === 'success') {
       return (
          <div className="cal-success">
-            <p className="ok">✓ Reunión confirmada</p>
+            <p className="ok">{tForm('confirmed.title')}</p>
             <p className="cal-state">
-               Te he enviado la confirmación a <b style={{ color: 'var(--text)' }}>{email}</b> para el {formatDateLong(slot)} a las{' '}
-               {formatTime(slot)}.
+               {tForm.rich('confirmed.message', {
+                  b: (chunks) => <b style={{ color: 'var(--text)' }}>{chunks}</b>,
+                  email,
+                  date: formatDateLong(slot, locale, timeZone),
+                  time: formatTime(slot, locale, timeZone),
+               })}
             </p>
-            <p className="comment">Nos vemos en la videollamada. Recibirás el enlace por email.</p>
+            <p className="comment">{tForm('confirmed.note')}</p>
          </div>
       );
    }
@@ -79,43 +101,43 @@ export default function BookingForm({ slot, onBack }: BookingFormProps) {
                onBack();
             }}
          >
-            ‹ volver al calendario
+            {tForm('back')}
          </button>
          <p className="slots-head" style={{ marginBottom: '0.4rem' }}>
-            // {formatDateLong(slot)} · {formatTime(slot)}
+            // {formatDateLong(slot, locale, timeZone)} · {formatTime(slot, locale, timeZone)}
          </p>
          <div className="cal-field">
-            <label htmlFor="bk-name">Nombre</label>
+            <label htmlFor="bk-name">{tForm('name')}</label>
             <input id="bk-name" value={name} onChange={(e) => setName(e.target.value)} required autoComplete="name" />
          </div>
          <div className="cal-field">
-            <label htmlFor="bk-email">Email</label>
+            <label htmlFor="bk-email">{tForm('email')}</label>
             <input id="bk-email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} required autoComplete="email" />
          </div>
          <div className="cal-field">
-            <label>¿En qué servicio estás interesado?</label>
+            <label>{tForm('serviceQuestion')}</label>
             <div className="cal-chips">
                {CAL_SERVICE_OPTIONS.map((option) => (
                   <button
                      type="button"
-                     key={option}
-                     className={services.includes(option) ? 'cal-chip active' : 'cal-chip'}
-                     aria-pressed={services.includes(option)}
-                     onClick={() => toggleService(option)}
+                     key={option.id}
+                     className={services.includes(option.value) ? 'cal-chip active' : 'cal-chip'}
+                     aria-pressed={services.includes(option.value)}
+                     onClick={() => toggleService(option.value)}
                   >
-                     {option}
+                     {t(option.id)}
                   </button>
                ))}
             </div>
          </div>
          <div className="cal-field">
-            <label htmlFor="bk-notes">¿De qué quieres hablar? (opcional)</label>
+            <label htmlFor="bk-notes">{tForm('notesQuestion')}</label>
             <textarea id="bk-notes" rows={3} value={notes} onChange={(e) => setNotes(e.target.value)} />
          </div>
          {error && <p className="cal-error">{error}</p>}
          <div style={{ marginTop: '1.1rem' }}>
             <button type="submit" className="btn btn-primary" disabled={status === 'loading'}>
-               {status === 'loading' ? 'Reservando…' : 'Confirmar reunión'}
+               {status === 'loading' ? tForm('submitting') : tForm('submit')}
             </button>
          </div>
       </form>

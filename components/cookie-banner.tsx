@@ -1,12 +1,14 @@
 'use client';
 
-import Link from 'next/link';
 import posthog from 'posthog-js';
+import { useTranslations } from 'next-intl';
 import { useEffect, useState } from 'react';
 
+import { Link } from '@/i18n/navigation';
 import { CONSENT_KEY, COOKIE_CONFIG_EVENT, type Consent } from '@/lib/consent';
 
 export default function CookieBanner() {
+   const t = useTranslations('cookies');
    const [show, setShow] = useState(false);
 
    // useEffect required: reads localStorage + schedules first-visit reveal, both client-only side effects.
@@ -38,18 +40,19 @@ export default function CookieBanner() {
    };
 
    return (
-      <div className={`cookie${show ? ' show' : ''}`} role="dialog" aria-live="polite" aria-label="Consentimiento de cookies">
-         <div className="ck-head">cookies</div>
+      <div className={`cookie${show ? ' show' : ''}`} role="dialog" aria-live="polite" aria-label={t('ariaLabel')}>
+         <div className="ck-head">{t('heading')}</div>
          <p>
-            Uso cookies técnicas y, si las aceptas, analíticas y las del calendario de Cal.com para mejorar tu experiencia. Puedes leer más en la{' '}
-            <Link href="/politica-de-cookies">política de cookies</Link>.
+            {t.rich('body', {
+               link: (chunks) => <Link href="/politica-de-cookies">{chunks}</Link>,
+            })}
          </p>
          <div className="cookie-actions">
             <button className="btn btn-primary" onClick={() => decide('accept')}>
-               Aceptar
+               {t('accept')}
             </button>
             <button className="btn btn-ghost" onClick={() => decide('reject')}>
-               Rechazar
+               {t('reject')}
             </button>
          </div>
       </div>

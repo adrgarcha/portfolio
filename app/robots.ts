@@ -5,7 +5,15 @@ export default function robots(): MetadataRoute.Robots {
       rules: {
          userAgent: '*',
          allow: '/',
-         disallow: ['/aviso-legal', '/politica-de-privacidad', '/politica-de-cookies', '/api/'],
+         disallow: [
+            '/aviso-legal',
+            '/politica-de-privacidad',
+            '/politica-de-cookies',
+            '/en/legal-notice',
+            '/en/privacy-policy',
+            '/en/cookie-policy',
+            '/api/',
+         ],
       },
       sitemap: 'https://adrichavero.com/sitemap.xml',
    };

@@ -1,0 +1,439 @@
+{
+   "common": {
+      "skipToContent": "Ir al contenido",
+      "breadcrumbHome": "inicio",
+      "breadcrumbAriaLabel": "migas de pan",
+      "bookMeetingCta": "Agenda una reunión",
+      "viewCase": "Ver caso",
+      "featuredCaseBadge": "caso destacado",
+      "viewDetail": "Ver detalle"
+   },
+   "nav": {
+      "brandAriaLabel": "adri_chavero — inicio",
+      "primaryAriaLabel": "principal",
+      "closeMenu": "Cerrar menú",
+      "openMenu": "Abrir menú",
+      "links": {
+         "home": "Inicio",
+         "services": "Servicios",
+         "cases": "Casos de éxito"
+      },
+      "languageSwitcherLabel": "Selector de idioma",
+      "switchLanguage": "Cambiar a inglés"
+   },
+   "localeNotice": {
+      "body": "Looks like you speak English. You can switch to the <link>English site anytime ;) →</link>",
+      "dismiss": "Dismiss"
+   },
+   "footer": {
+      "statement": "de la idea al producto. software a medida desde Sevilla.",
+      "copyright": "© 2026 Adri Chavero · Sevilla, España",
+      "builtWith": "built with good coffee",
+      "brandLine": "Desarrollo de aplicaciones web y móviles a medida.",
+      "followLinkedin": "Sígueme en LinkedIn",
+      "cookieSettings": "Configuración de cookies",
+      "columns": {
+         "navigation": {
+            "title": "navegación",
+            "links": {
+               "home": "Inicio",
+               "services": "Servicios",
+               "cases": "Casos de éxito",
+               "sevilla": "Desarrollador web en Sevilla",
+               "booking": "Agenda"
+            }
+         },
+         "services": {
+            "title": "servicios",
+            "links": {
+               "web": "Aplicaciones web",
+               "integrations": "Integraciones",
+               "mobile": "Apps móviles",
+               "maintenance": "Mantenimiento"
+            }
+         },
+         "legal": {
+            "title": "legal",
+            "links": {
+               "notice": "Aviso legal",
+               "privacy": "Privacidad",
+               "cookies": "Cookies"
+            }
+         }
+      }
+   },
+   "pains": {
+      "eyebrow": "en qué te puedo ayudar",
+      "heading": "Si algo de esto te suena, hablemos.",
+      "items": [
+         {
+            "n": "// 01",
+            "question": "¿Tienes un proceso manual que te roba horas y necesitas una herramienta hecha a tu medida?",
+            "answer": "Convierto esa hoja de cálculo o ese flujo de copia-pega en software que trabaja por ti."
+         },
+         {
+            "n": "// 02",
+            "question": "¿Tu software actual no se entiende con tus otras herramientas (ERP, e-commerce, facturación)?",
+            "answer": "Conecto tus sistemas para que los datos fluyan solos, sin dobles registros ni errores."
+         },
+         {
+            "n": "// 03",
+            "question": "¿Necesitas una app para que tu equipo o tus clientes trabajen mejor?",
+            "answer": "Diseño y desarrollo aplicaciones móviles pensadas para el uso real del día a día."
+         },
+         {
+            "n": "// 04",
+            "question": "¿Tienes algo ya construido que se cae y nadie mantiene?",
+            "answer": "Reviso, estabilizo y hago evolucionar lo que ya tienes para que deje de darte sustos."
+         }
+      ]
+   },
+   "testimonials": {
+      "eyebrow": "testimonios",
+      "heading": "Qué dicen quienes han trabajado conmigo.",
+      "items": [
+         {
+            "quote": "Está muy bien todo Adrián, me gusta mucho lo que estás haciendo con la app. Muy chulo.",
+            "role": "Project Manager · Bim Consulting"
+         },
+         {
+            "quote": "Enhorabuena Adri, estás haciendo un gran trabajo.",
+            "role": "CEO · Gimbal Project"
+         }
+      ]
+   },
+   "linkedin": {
+      "eyebrow": "me encuentras en linkedin hablando de",
+      "heading": "Comparto lo que aprendo construyendo.",
+      "followLinkedin": "Sígueme en LinkedIn",
+      "topics": [
+         { "text": "Desarrollo de software a medida", "meta": "post" },
+         { "text": "Integraciones que ahorran horas de trabajo", "meta": "post" },
+         { "text": "El día a día como desarrollador freelance", "meta": "post" },
+         { "text": "Herramientas y trucos para devs", "meta": "post" }
+      ]
+   },
+   "services": {
+      "homeEyebrow": "servicios",
+      "homeHeading": "Lo que construyo para tu negocio.",
+      "homeLede": "El desarrollo web a medida es el núcleo. Alrededor, todo lo necesario para que tu software funcione, crezca y siga bien cuidado.",
+      "items": {
+         "web": {
+            "title": "Aplicaciones web a medida",
+            "lead": "Software hecho a la medida exacta de tu forma de trabajar, no al revés.",
+            "bullets": [
+               "Herramientas internas que sustituyen hojas de cálculo y procesos manuales",
+               "Paneles, gestores y plataformas a medida de tu operativa",
+               "Arquitectura limpia, rápida y preparada para crecer"
+            ],
+            "kicker": "servicio principal",
+            "problem": "Hoy lo llevas a base de hojas de cálculo, copia-pega entre herramientas y tareas que repites cada semana. Funciona… hasta que deja de funcionar. Te construyo una aplicación hecha a la medida exacta de tu proceso, que se encarga de ese trabajo repetitivo por ti.",
+            "howIWork": "Empiezo por entender tu problema real, no por una lista de funciones. Construyo por fases y te enseño avances pronto, para que ajustemos sobre algo que ya puedes tocar y no sobre un documento. Me vas a tener cerca en todo el proceso.",
+            "includes": [
+               "Herramientas internas que sustituyen procesos manuales",
+               "Paneles de gestión, gestores y plataformas a medida",
+               "Acceso por roles y permisos para tu equipo",
+               "Arquitectura limpia, rápida y preparada para crecer",
+               "Despliegue, puesta en marcha y acompañamiento"
+            ],
+            "tokens": ["next.js", "react"],
+            "detailTokens": ["next.js", "react", "typescript", "postgresql"]
+         },
+         "integraciones": {
+            "title": "Integraciones y conexión de sistemas",
+            "lead": "Que tus herramientas hablen entre sí y dejen de duplicarte el trabajo.",
+            "bullets": [
+               "Conexión con e-commerce, ERPs y software de facturación",
+               "Sincronización de pedidos, stock, clientes y pagos",
+               "APIs y automatizaciones de datos entre plataformas"
+            ],
+            "problem": "¿Tu tienda online no se entiende con tu programa de facturación? ¿El ERP por un lado, los pedidos por otro y tú en medio pasando datos a mano? Integro tu tienda online con el ERP y conecto tus herramientas para que la información viaje sola de una a otra y dejes de hacer tú de puente.",
+            "includes": [
+               "Conexión con e-commerce (Shopify, WooCommerce, PrestaShop…)",
+               "Sincronización con ERPs y software de facturación",
+               "Pasarelas de pago y conciliación",
+               "Automatización del flujo de datos entre plataformas"
+            ],
+            "tokens": ["integración", "stripe"],
+            "detailTokens": ["integración", "apis", "stripe", "webhooks"]
+         },
+         "movil": {
+            "title": "Aplicaciones móviles",
+            "lead": "Apps para que tu equipo o tus clientes trabajen mejor, allá donde estén.",
+            "bullets": [
+               "Apps iOS y Android desde una sola base de código",
+               "Para uso interno del equipo o de cara a tus clientes",
+               "Rápidas de publicar y fáciles de mantener"
+            ],
+            "problem": "Tu equipo trabaja sobre el terreno con el móvil en la mano, o tus clientes quieren tu servicio a un toque, en el bolsillo. Te hago la app para iOS y Android desde una sola base de código, rápida de publicar y de mantener, sin que tengas que duplicar esfuerzo en cada plataforma.",
+            "includes": [
+               "Apps de uso interno para tu equipo",
+               "Apps de cara a tus clientes",
+               "Publicación en App Store y Google Play",
+               "Notificaciones, perfiles y sincronización en la nube"
+            ],
+            "tokens": ["react native", "expo"],
+            "detailTokens": ["react native", "expo", "ios", "android"]
+         },
+         "mantenimiento": {
+            "title": "Mantenimiento y evolución web",
+            "lead": "Que lo que ya tienes siga funcionando, sea estable y siga mejorando.",
+            "bullets": [
+               "Estabilización de proyectos que fallan o nadie mantiene",
+               "Mejoras continuas, nuevas funciones y rendimiento",
+               "Acompañamiento técnico a largo plazo"
+            ],
+            "problem": "Tienes algo construido que falla, va lento o que ya nadie mantiene, y cada semana aparece una papeleta nueva. Lo reviso a fondo, lo estabilizo y lo hago evolucionar contigo para que deje de darte sustos y vuelvas a confiar en ello.",
+            "includes": [
+               "Auditoría y estabilización de proyectos existentes",
+               "Corrección de errores y mejoras de rendimiento",
+               "Nuevas funciones y evolución continua",
+               "Acompañamiento técnico a largo plazo"
+            ],
+            "tokens": ["mantenimiento", "soporte"],
+            "detailTokens": ["mantenimiento", "soporte", "rendimiento"]
+         }
+      }
+   },
+   "servicesPage": {
+      "metaTitle": "Servicios",
+      "metaDescription": "Desarrollo web a medida, integraciones, apps móviles y mantenimiento. Software hecho para resolver un problema concreto de tu negocio.",
+      "breadcrumbLabel": "servicios",
+      "eyebrow": "servicios",
+      "title": "Cómo te ayudo a resolver el problema.",
+      "lede": "Trabajo de forma directa y cercana: entiendo tu negocio, te digo qué se puede hacer y construyo software que de verdad usas. Sin intermediarios, sin humo, sin precios cerrados de catálogo.",
+      "howIWorkLabel": "cómo trabajo",
+      "includesLabel": "qué incluye",
+      "ctaHeading": "¿Cuál de estos es tu caso?",
+      "ctaLede": "Cuéntamelo en una reunión de 30 minutos. Sin compromiso, hablamos de tu necesidad concreta."
+   },
+   "casesPage": {
+      "metaTitle": "Casos de éxito",
+      "metaDescription": "Proyectos reales para empresas reales. Cada uno empezó por un problema concreto de negocio.",
+      "breadcrumbLabel": "casos de éxito",
+      "eyebrow": "casos de éxito",
+      "title": "Software que ya está funcionando.",
+      "lede": "Proyectos reales para empresas reales. Cada uno empezó por un problema concreto de negocio y terminó en algo que la gente usa cada día.",
+      "ctaHeading": "¿Tu proyecto puede ser el próximo?",
+      "ctaLede": "Cuéntame qué necesitas en una reunión de 30 minutos, sin compromiso."
+   },
+   "caseDetail": {
+      "eyebrow": "caso de éxito",
+      "context": "Contexto",
+      "challenge": "El reto",
+      "solution": "Qué hice",
+      "outcome": "Resultado",
+      "ctaHeading": "¿Tienes un reto parecido?",
+      "ctaLede": "Hablemos 30 minutos, sin compromiso. Te digo si puedo ayudarte.",
+      "backLink": "Ver todos los casos"
+   },
+   "sevilla": {
+      "metaTitle": "Desarrollador web en Sevilla",
+      "metaDescription": "Desarrollador web freelance en Sevilla. Software a medida, aplicaciones web, tiendas online e integraciones para pymes y negocios de Sevilla y Andalucía.",
+      "breadcrumbLabel": "desarrollador web en sevilla",
+      "eyebrow": "desarrollador web · sevilla",
+      "title": "Desarrollador web freelance en Sevilla",
+      "lede": "Soy Adri Chavero. Construyo software a medida para pymes y negocios de Sevilla y toda Andalucía: aplicaciones web, tiendas online e integraciones que resuelven un problema concreto, no plantillas genéricas.",
+      "whatIDo": {
+         "eyebrow": "qué hago",
+         "heading": "Desarrollo web a medida, de la idea al producto",
+         "p1": "El desarrollo de aplicaciones web en Sevilla suele venderse por catálogo: una plantilla, cuatro retoques y a correr. Yo trabajo al revés. Primero entiendo tu negocio y el problema que te quita horas, y a partir de ahí diseño y construyo el software que lo resuelve.",
+         "p2": "Hago aplicaciones web a medida, paneles de gestión, integraciones entre tus sistemas (ERP, e-commerce, facturación) y desarrollo de tienda online en Sevilla cuando lo que necesitas es vender. Una sola persona de principio a fin: hablas directo conmigo, sin intermediarios ni sorpresas."
+      },
+      "forWhom": {
+         "eyebrow": "para quién",
+         "heading": "Pensado para negocios de Sevilla y Andalucía",
+         "p1": "Trabajo sobre todo con pymes, autónomos y negocios de Sevilla y alrededores que ya tienen un proceso manual o una herramienta que se les ha quedado pequeña. Si llevas tu operación a base de hojas de cálculo, WhatsApp y copia-pega, ahí es donde un desarrollo web a medida marca la diferencia.",
+         "list": [
+            "Aplicaciones web y paneles de gestión para tu día a día",
+            "Desarrollo de tienda online en Sevilla, conectada con tus sistemas",
+            "Integraciones entre ERP, e-commerce y facturación",
+            "Mantenimiento y evolución de lo que ya tienes en marcha"
+         ],
+         "p2": "No me dedico a un único sector: lo que tienen en común mis proyectos es que parten de un problema real de negocio. He trabajado con empresas industriales, ópticas, agencias y startups, y en todos los casos el punto de partida fue el mismo: una operación que dependía de hojas de cálculo, correos y procesos manuales que ya no daban más de sí."
+      },
+      "howIWork": {
+         "eyebrow": "cómo trabajo",
+         "heading": "Hablas directo conmigo, de principio a fin",
+         "p1": "No subcontrato ni te paso de un comercial a un jefe de proyecto y de ahí a un becario. El desarrollo web que contratas lo hago yo: la misma persona que entiende tu negocio es la que escribe el código y la que te coge el teléfono cuando algo falla.",
+         "p2": "Trabajo por fases y te enseño avances pronto, sobre algo que puedes tocar y no sobre un documento de cien páginas. Así ajustamos rápido y no te llevas sorpresas al final. Cuando lanzamos, me quedo cerca para mantenerlo y hacerlo crecer contigo. Estoy en Sevilla, así que también podemos vernos en persona si lo prefieres, aunque la mayor parte del trabajo lo llevamos en remoto sin problema."
+      },
+      "cases": {
+         "eyebrow": "casos",
+         "heading": "Proyectos reales, aquí al lado",
+         "intro": "Algunos ejemplos: un <optica>software de gestión para una óptica</optica>, el <verifactu>software de facturación Verifactu</verifactu> de una empresa industrial o una <cotizadora>cotizadora a medida</cotizadora> que genera presupuestos en minutos."
+      },
+      "cta": {
+         "heading": "¿Necesitas un desarrollador web en Sevilla?",
+         "lede": "Cuéntame tu proyecto en una reunión de 30 minutos, sin compromiso. Te digo si puedo ayudarte."
+      }
+   },
+   "meta": {
+      "site": {
+         "title": "Adri Chavero — Desarrollo de software a medida",
+         "titleTemplate": "%s · Adri Chavero",
+         "description": "Desarrollo aplicaciones web y móviles a medida. De la idea al producto, software hecho para resolver un problema concreto de tu negocio. Desde Sevilla.",
+         "ogTitle": "Adri Chavero — Desarrollo de software a medida",
+         "ogDescription": "Desarrollo aplicaciones web y móviles a medida. Software hecho para resolver un problema concreto de tu negocio. Desde Sevilla.",
+         "twitterDescription": "Desarrollo aplicaciones web y móviles a medida. Desde Sevilla."
+      },
+      "pages": {
+         "home": {
+            "title": "Desarrollador web en Sevilla · Software a medida | Adri Chavero",
+            "description": "Desarrollador web en Sevilla especializado en software a medida. Aplicaciones web y móviles que resuelven un problema concreto de tu negocio, de la idea al producto."
+         }
+      }
+   },
+   "home": {
+      "hero": {
+         "typewriterText": "Desarrollo de software a medida en Sevilla",
+         "heading": "Tú me cuentas el problema. Yo te entrego el software que lo resuelve.",
+         "lede": "Hecho para resolver un problema concreto de tu negocio. Tratas solamente conmigo de principio a fin.",
+         "note": "30 min · sin compromiso",
+         "portraitAlt": "Retrato de Adri Chavero, desarrollador full-stack"
+      },
+      "about": {
+         "eyebrow": "sobre mí",
+         "heading": "De un pueblo de Extremadura a tu proyecto.",
+         "portraitAlt": "Monesterio, pueblo de Extremadura donde se crió Adri Chavero",
+         "portraitPlaceholder": "foto · Extremadura",
+         "paragraph1": "Soy de <b>Monesterio</b>, un pueblo al sur de Extremadura, de una familia humilde donde no se mira a nadie por encima del hombro. No fui de esos que con doce años ya programaban: me metí en esto porque mi padre me dijo que tenía futuro, y la pasión la encontré después, ya en la carrera.",
+         "paragraph2": "Lo que vino luego me enseñó sobre todo qué trabajo <b>no</b> quería. En cada empresa por la que pasé había un muro entre yo y la gente que de verdad usaba lo que construía: un intermediario, un proceso, siempre algo de por medio. Trabajaba un poco a ciegas, sin llegar a saber si lo que hacía le servía a alguien. Y resulta que eso, saber que le mejoro el día a una persona, es justo lo que me mueve.",
+         "paragraph3": "Por eso me hice freelance: para tirar ese muro abajo. Hoy trabajo como desarrollador web freelance en Sevilla, y para mí esto no va de entregarte un trabajo y desaparecer, sino de <b>preocuparme por tu producto como si fuera mío</b>. Trabajando conmigo hablas claro y directo con quien construye tu software, y yo veo de primera mano si te cambia las cosas. Sin intermediarios y sin sorpresas."
+      },
+      "cases": {
+         "eyebrow": "casos de éxito",
+         "heading": "Software que ya está funcionando.",
+         "lede": "Proyectos reales para empresas reales: software que sus equipos usan cada día para trabajar mejor.",
+         "viewAllLabel": "Ver los 6 casos"
+      },
+      "techStack": {
+         "kicker": "las herramientas con las que construyo",
+         "heading": "Stack"
+      },
+      "logos": {
+         "kicker": "marcas con las que he trabajado",
+         "heading": "Han confiado en mi trabajo"
+      },
+      "agenda": {
+         "eyebrow": "hablemos de tu proyecto",
+         "heading": "Cuéntame qué necesitas.",
+         "lede": "30 minutos, sin compromiso. Me cuentas tu problema y vemos juntos si puedo ayudarte."
+      }
+   },
+   "booking": {
+      "serviceOptions": {
+         "web": "Aplicaciones web a medida",
+         "integrations": "Integraciones y conexión de sistemas",
+         "mobile": "Aplicaciones móviles",
+         "maintenance": "Mantenimiento y evolución web"
+      },
+      "page": {
+         "metaTitle": "Agenda una reunión",
+         "metaDescription": "Reserva una videollamada de 30 minutos, sin compromiso. Me cuentas tu necesidad y te digo si puedo ayudarte y cómo.",
+         "breadcrumbLabel": "agenda",
+         "eyebrow": "agenda una reunión",
+         "heading": "Hablemos de tu proyecto.",
+         "lede": "Una videollamada de <strong>30 minutos, sin compromiso</strong>. Me cuentas tu necesidad, te hago las preguntas justas y te digo con honestidad si puedo ayudarte y cómo.",
+         "footnote": "qué esperar: una conversación, no una venta. Sales con una idea clara de los siguientes pasos."
+      },
+      "booker": {
+         "whoStatus": "adri_chavero · disponible",
+         "meetingTitle": "Reunión de 30 min",
+         "meta": {
+            "duration": "30 minutos",
+            "videocall": "Videollamada",
+            "noCommitment": "Sin compromiso",
+            "timezone": "Horarios en tu zona horaria ({tz})"
+         },
+         "connectedNote": "reserva conectada en tiempo real con Cal.com",
+         "notConfigured": {
+            "message": "El calendario se conectará muy pronto.",
+            "openCalendar": "Abrir calendario"
+         },
+         "prevMonth": "Mes anterior",
+         "nextMonth": "Mes siguiente",
+         "slots": {
+            "forDate": "// huecos · {date}",
+            "chooseDay": "// elige un día",
+            "loading": "cargando disponibilidad…",
+            "noSlotsThisDay": "sin huecos este día, prueba otro.",
+            "selectDay": "selecciona un día disponible para ver los huecos."
+         },
+         "months": [
+            "enero",
+            "febrero",
+            "marzo",
+            "abril",
+            "mayo",
+            "junio",
+            "julio",
+            "agosto",
+            "septiembre",
+            "octubre",
+            "noviembre",
+            "diciembre"
+         ],
+         "dow": ["L", "M", "X", "J", "V", "S", "D"]
+      },
+      "form": {
+         "back": "‹ volver al calendario",
+         "name": "Nombre",
+         "email": "Email",
+         "serviceQuestion": "¿En qué servicio estás interesado?",
+         "notesQuestion": "¿De qué quieres hablar? (opcional)",
+         "submitting": "Reservando…",
+         "submit": "Confirmar reunión",
+         "confirmed": {
+            "title": "✓ Reunión confirmada",
+            "message": "Te he enviado la confirmación a <b>{email}</b> para el {date} a las {time}.",
+            "note": "Nos vemos en la videollamada. Recibirás el enlace por email."
+         },
+         "errors": {
+            "not_configured": "El calendario no está configurado todavía.",
+            "rate_limited": "Demasiadas reservas seguidas. Espera un momento e inténtalo de nuevo.",
+            "invalid_request": "Petición no válida.",
+            "missing_fields": "Nombre, email y hora son obligatorios.",
+            "too_long": "El nombre o el email son demasiado largos.",
+            "invalid_email": "El email no parece válido.",
+            "no_service_selected": "Selecciona al menos un servicio",
+            "cal_unavailable": "No se pudo crear la reserva. Inténtalo de nuevo en un momento.",
+            "connection_failed": "No se pudo conectar. Inténtalo de nuevo.",
+            "unknown": "Ha ocurrido un error. Inténtalo de nuevo."
+         }
+      }
+   },
+   "schema": {
+      "name": "Adri Chavero — Desarrollo de software a medida",
+      "description": "Desarrollador web freelance en Sevilla especializado en software a medida: aplicaciones web y móviles, integraciones y mantenimiento.",
+      "knowsAbout": ["Desarrollo de software a medida", "Aplicaciones web", "Aplicaciones móviles", "Integraciones de sistemas", "Verifactu"]
+   },
+   "legal": {
+      "eyebrow": "legal",
+      "updatedPrefix": "Última actualización",
+      "prevalenceNotice": "Esta es una traducción de cortesía. En caso de discrepancia, <link>la versión en español</link> de este documento es la vinculante legalmente.",
+      "legalNotice": {
+         "metaTitle": "Aviso legal",
+         "breadcrumbLabel": "aviso legal",
+         "title": "Aviso legal"
+      },
+      "privacyPolicy": {
+         "metaTitle": "Política de privacidad",
+         "breadcrumbLabel": "política de privacidad",
+         "title": "Política de privacidad"
+      },
+      "cookiePolicy": {
+         "metaTitle": "Política de cookies",
+         "breadcrumbLabel": "política de cookies",
+         "title": "Política de cookies",
+         "openSettings": "Abrir configuración de cookies"
+      }
+   },
+   "cookies": {
+      "ariaLabel": "Consentimiento de cookies",
+      "heading": "cookies",
+      "body": "Uso cookies técnicas y, si las aceptas, analíticas y las del calendario de Cal.com para mejorar tu experiencia. Puedes leer más en la <link>política de cookies</link>.",
+      "accept": "Aceptar",
+      "reject": "Rechazar"
+   }
+}

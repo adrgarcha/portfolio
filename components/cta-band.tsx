@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { Link, type AppHref } from '@/i18n/navigation';
 
 import CtaLink from './cta-link';
 import Reveal from './reveal';
@@ -19,7 +19,7 @@ export default function CtaBand({ heading, lede, source, backLink }: CtaBandProp
             <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center' }}>
                <CtaLink large source={source} />
                {backLink && (
-                  <Link className="link-arrow" href={backLink.href}>
+                  <Link className="link-arrow" href={backLink.href as AppHref}>
                      {backLink.label} <span className="arrow">→</span>
                   </Link>
                )}

@@ -1,9 +1,11 @@
 'use client';
 
 import Image from 'next/image';
-import Link from 'next/link';
 import posthog from 'posthog-js';
+import { useLocale, useTranslations } from 'next-intl';
 
+import { Link } from '@/i18n/navigation';
+import type { Locale } from '@/i18n/routing';
 import type { Case } from '@/lib/types';
 import Tokens from './tokens';
 
@@ -12,23 +14,27 @@ interface CaseCardProps {
 }
 
 function Thumb({ item }: CaseCardProps) {
+   const t = useTranslations('common');
+
    if (item.img) {
       return (
          <div className="thumb">
-            {item.featured && <span className="badge">caso destacado</span>}
+            {item.featured && <span className="badge">{t('featuredCaseBadge')}</span>}
             <Image src={item.img} alt={item.shortTitle} fill sizes="(max-width: 620px) 100vw, 33vw" style={{ objectFit: 'cover', objectPosition: 'left' }} />
          </div>
       );
    }
    return (
       <div className="thumb">
-         {item.featured && <span className="badge">caso destacado</span>}
+         {item.featured && <span className="badge">{t('featuredCaseBadge')}</span>}
          <div className="ph">{item.thumb}</div>
       </div>
    );
 }
 
 function Body({ item }: CaseCardProps) {
+   const t = useTranslations('common');
+
    return (
       <div className="case-body">
          <Tokens tokens={item.tokens} />
@@ -37,7 +43,7 @@ function Body({ item }: CaseCardProps) {
          <p className="metric">{item.metric}</p>
          <span className="case-foot">
             <span className="link-arrow">
-               Ver caso <span className="arrow">→</span>
+               {t('viewCase')} <span className="arrow">→</span>
             </span>
          </span>
       </div>
@@ -45,11 +51,12 @@ function Body({ item }: CaseCardProps) {
 }
 
 function trackCaseClick(item: Case) {
-   posthog.capture('case_clicked', { slug: item.slug, featured: item.featured || false });
+   posthog.capture('case_clicked', { caseId: item.id, featured: item.featured || false });
 }
 
 export default function CaseCard({ item }: CaseCardProps) {
-   const href = `/casos-de-exito/${item.slug}`;
+   const locale = useLocale() as Locale;
+   const href = { pathname: '/casos-de-exito/[slug]', params: { slug: item.slug[locale] } } as const;
 
    if (item.featured) {
       return (

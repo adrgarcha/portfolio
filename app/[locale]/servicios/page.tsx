@@ -1,29 +1,50 @@
 import type { Metadata } from 'next';
+import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server';
+
+import type { Locale } from '@/i18n/routing';
 
 import CtaBand from '@/components/cta-band';
 import Reveal from '@/components/reveal';
 import ServiceDetailBlock from '@/components/service-detail-block';
 import Tokens from '@/components/tokens';
 import PageHeader from '@/components/page-header';
-import { SERVICES } from '@/lib/services';
+import { SERVICES, toTokens } from '@/lib/services';
+import { alternatesFor } from '@/lib/seo';
+import type { ServiceCopy } from '@/lib/types';
 
-export const metadata: Metadata = {
-   title: 'Servicios',
-   description:
-      'Desarrollo web a medida, integraciones, apps móviles y mantenimiento. Software hecho para resolver un problema concreto de tu negocio.',
-   alternates: { canonical: '/servicios' },
-};
+interface PageProps {
+   params: Promise<{ locale: string }>;
+}
 
-const [web, ...rest] = SERVICES;
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+   const { locale } = await params;
+   const t = await getTranslations({ locale: locale as Locale, namespace: 'servicesPage' });
 
-export default function ServiciosPage() {
+   return {
+      title: t('metaTitle'),
+      description: t('metaDescription'),
+      alternates: alternatesFor(locale as Locale, { pathname: '/servicios' }),
+   };
+}
+
+export default async function ServiciosPage({ params }: PageProps) {
+   const { locale } = await params;
+   setRequestLocale(locale as Locale);
+
+   const t = await getTranslations('servicesPage');
+   const tCommon = await getTranslations('common');
+   const messages = await getMessages();
+   const items = messages.services.items as unknown as Record<string, ServiceCopy>;
+   const services = SERVICES.map((service) => ({ ...service, ...items[service.id] }));
+   const [web, ...rest] = services;
+
    return (
       <main>
          <PageHeader
-            breadcrumb={[{ label: 'inicio', href: '/' }, { label: 'servicios' }]}
-            eyebrow="servicios"
-            title="Cómo te ayudo a resolver el problema."
-            lede="Trabajo de forma directa y cercana: entiendo tu negocio, te digo qué se puede hacer y construyo software que de verdad usas. Sin intermediarios, sin humo, sin precios cerrados de catálogo."
+            breadcrumb={[{ label: tCommon('breadcrumbHome'), href: '/' }, { label: t('breadcrumbLabel') }]}
+            eyebrow={t('eyebrow')}
+            title={t('title')}
+            lede={t('lede')}
          />
 
          <section className="section-pad" id="web">
@@ -40,21 +61,21 @@ export default function ServiciosPage() {
                            {web.problem}
                         </p>
                         <p className="comment" style={{ marginTop: '1.4rem' }}>
-                           cómo trabajo
+                           {t('howIWorkLabel')}
                         </p>
                         <p className="body" style={{ marginTop: '0.4rem' }}>
                            {web.howIWork}
                         </p>
                      </div>
                      <div>
-                        <p className="comment">qué incluye</p>
+                        <p className="comment">{t('includesLabel')}</p>
                         <ul className="svc" style={{ marginTop: '1rem' }}>
                            {web.includes?.map((item) => (
                               <li key={item}>{item}</li>
                            ))}
                         </ul>
                         <div style={{ marginTop: '1.6rem' }}>
-                           <Tokens tokens={web.detailTokens} />
+                           <Tokens tokens={toTokens(web.detailTokens)} />
                         </div>
                      </div>
                   </div>
@@ -69,7 +90,7 @@ export default function ServiciosPage() {
             </div>
          ))}
 
-         <CtaBand heading="¿Cuál de estos es tu caso?" lede="Cuéntamelo en una reunión de 30 minutos. Sin compromiso, hablamos de tu necesidad concreta." source="servicios" />
+         <CtaBand heading={t('ctaHeading')} lede={t('ctaLede')} source="servicios" />
       </main>
    );
 }

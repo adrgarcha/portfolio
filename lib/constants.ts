@@ -1,42 +1,40 @@
-import type { Brand, FooterColumn, NavLink, PainPoint, Testimonial, Topic } from './types';
+import type { Brand, FooterColumn, MainNavLink, Testimonial } from './types';
 
 export const CAL_LINK = process.env.NEXT_PUBLIC_CAL_LINK || 'https://cal.com/adrichavero/30min';
 export const LINKEDIN_URL = 'https://www.linkedin.com/in/adrichavero';
 
-export const NAV_LINKS: NavLink[] = [
-   { label: 'Inicio', href: '/' },
-   { label: 'Servicios', href: '/servicios' },
-   { label: 'Casos de éxito', href: '/casos-de-exito' },
+export const NAV_LINKS: MainNavLink[] = [
+   { key: 'home', href: '/' },
+   { key: 'services', href: '/servicios' },
+   { key: 'cases', href: '/casos-de-exito' },
 ];
-
-export const FOOTER_STATEMENT = 'de la idea al producto. software a medida desde Sevilla.';
 
 export const FOOTER_COLUMNS: FooterColumn[] = [
    {
-      title: 'navegación',
+      key: 'navigation',
       links: [
-         { label: 'Inicio', href: '/' },
-         { label: 'Servicios', href: '/servicios' },
-         { label: 'Casos de éxito', href: '/casos-de-exito' },
-         { label: 'Desarrollador web en Sevilla', href: '/desarrollador-web-sevilla' },
-         { label: 'Agenda', href: '/agenda' },
+         { key: 'home', href: '/' },
+         { key: 'services', href: '/servicios' },
+         { key: 'cases', href: '/casos-de-exito' },
+         { key: 'sevilla', href: '/desarrollador-web-sevilla' },
+         { key: 'booking', href: '/agenda' },
       ],
    },
    {
-      title: 'servicios',
+      key: 'services',
       links: [
-         { label: 'Aplicaciones web', href: '/servicios#web' },
-         { label: 'Integraciones', href: '/servicios#integraciones' },
-         { label: 'Apps móviles', href: '/servicios#movil' },
-         { label: 'Mantenimiento', href: '/servicios#mantenimiento' },
+         { key: 'web', href: '/servicios#web' },
+         { key: 'integrations', href: '/servicios#integraciones' },
+         { key: 'mobile', href: '/servicios#movil' },
+         { key: 'maintenance', href: '/servicios#mantenimiento' },
       ],
    },
    {
-      title: 'legal',
+      key: 'legal',
       links: [
-         { label: 'Aviso legal', href: '/aviso-legal' },
-         { label: 'Privacidad', href: '/politica-de-privacidad' },
-         { label: 'Cookies', href: '/politica-de-cookies' },
+         { key: 'notice', href: '/aviso-legal' },
+         { key: 'privacy', href: '/politica-de-privacidad' },
+         { key: 'cookies', href: '/politica-de-cookies' },
       ],
    },
 ];
@@ -67,50 +65,7 @@ export const BRANDS: Brand[] = [
    { name: 'ITFB Consulting', logo: '/brands/iftb.webp' },
 ];
 
-export const PAIN_POINTS: PainPoint[] = [
-   {
-      n: '// 01',
-      question: '¿Tienes un proceso manual que te roba horas y necesitas una herramienta hecha a tu medida?',
-      answer: 'Convierto esa hoja de cálculo o ese flujo de copia-pega en software que trabaja por ti.',
-   },
-   {
-      n: '// 02',
-      question: '¿Tu software actual no se entiende con tus otras herramientas (ERP, e-commerce, facturación)?',
-      answer: 'Conecto tus sistemas para que los datos fluyan solos, sin dobles registros ni errores.',
-   },
-   {
-      n: '// 03',
-      question: '¿Necesitas una app para que tu equipo o tus clientes trabajen mejor?',
-      answer: 'Diseño y desarrollo aplicaciones móviles pensadas para el uso real del día a día.',
-   },
-   {
-      n: '// 04',
-      question: '¿Tienes algo ya construido que se cae y nadie mantiene?',
-      answer: 'Reviso, estabilizo y hago evolucionar lo que ya tienes para que deje de darte sustos.',
-   },
-];
-
 export const TESTIMONIALS: Testimonial[] = [
-   {
-      quote: 'Está muy bien todo Adrián, me gusta mucho lo que estás haciendo con la app. Muy chulo.',
-      name: 'Germán Bayón',
-      role: 'Project Manager · Bim Consulting',
-      avatar: '/testimonials/german.webp',
-   },
-   {
-      quote: 'Enhorabuena Adri, estás haciendo un gran trabajo.',
-      name: 'José Pedro Guzmán',
-      role: 'CEO · Gimbal Project',
-      avatar: '/testimonials/guzman.webp',
-   },
+   { name: 'Germán Bayón', avatar: '/testimonials/german.webp' },
+   { name: 'José Pedro Guzmán', avatar: '/testimonials/guzman.webp' },
 ];
-
-export const LINKEDIN_TOPICS: Topic[] = [
-   { text: 'Desarrollo de software a medida', meta: 'post' },
-   { text: 'Integraciones que ahorran horas de trabajo', meta: 'post' },
-   { text: 'El día a día como desarrollador freelance', meta: 'post' },
-   { text: 'Herramientas y trucos para devs', meta: 'post' },
-];
-
-export const COPYRIGHT = '© 2026 Adri Chavero · Sevilla, España';
-export const BUILT_WITH = 'built with good coffee';

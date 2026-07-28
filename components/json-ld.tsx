@@ -1,3 +1,5 @@
+import { getPathname } from '@/i18n/navigation';
+import type { Locale } from '@/i18n/routing';
 import { LINKEDIN_URL } from '@/lib/constants';
 import type { Case } from '@/lib/types';
 
@@ -7,31 +9,35 @@ interface JsonLdProps {
    data: Record<string, unknown>;
 }
 
-export const professionalServiceSchema: Record<string, unknown> = {
-   '@context': 'https://schema.org',
-   '@type': 'ProfessionalService',
-   name: 'Adri Chavero — Desarrollo de software a medida',
-   description:
-      'Desarrollador web freelance en Sevilla especializado en software a medida: aplicaciones web y móviles, integraciones y mantenimiento.',
-   url: BASE,
-   image: `${BASE}/opengraph-image.jpg`,
-   areaServed: [
-      { '@type': 'City', name: 'Sevilla' },
-      { '@type': 'AdministrativeArea', name: 'Andalucía' },
-   ],
-   sameAs: [LINKEDIN_URL],
-   knowsAbout: [
-      'Desarrollo de software a medida',
-      'Aplicaciones web',
-      'Aplicaciones móviles',
-      'Integraciones de sistemas',
-      'Verifactu',
-   ],
-   provider: { '@type': 'Person', name: 'Adri Chavero' },
-   founder: { '@type': 'Person', name: 'Adri Chavero' },
-};
+export function professionalServiceSchema(
+   locale: Locale,
+   name: string,
+   description: string,
+   knowsAbout: string[],
+): Record<string, unknown> {
+   return {
+      '@context': 'https://schema.org',
+      '@type': 'ProfessionalService',
+      name,
+      description,
+      url: BASE,
+      image: `${BASE}/opengraph-image.jpg`,
+      ...(locale === 'es'
+         ? { areaServed: [{ '@type': 'City', name: 'Sevilla' }, { '@type': 'AdministrativeArea', name: 'Andalucía' }] }
+         : { availableLanguage: ['es', 'en'] }),
+      sameAs: [LINKEDIN_URL],
+      knowsAbout,
+      provider: { '@type': 'Person', name: 'Adri Chavero' },
+      founder: { '@type': 'Person', name: 'Adri Chavero' },
+   };
+}
 
-export function caseArticleSchema(item: Case): Record<string, unknown> {
+export function caseArticleSchema(item: Case, locale: Locale): Record<string, unknown> {
+   const mainEntityOfPage = `${BASE}${getPathname({
+      locale,
+      href: { pathname: '/casos-de-exito/[slug]', params: { slug: item.slug[locale] } },
+   })}`;
+
    return {
       '@context': 'https://schema.org',
       '@type': 'Article',
@@ -40,7 +46,8 @@ export function caseArticleSchema(item: Case): Record<string, unknown> {
       author: { '@type': 'Person', name: 'Adri Chavero' },
       publisher: { '@type': 'Person', name: 'Adri Chavero' },
       ...(item.img ? { image: `${BASE}${item.img}` } : {}),
-      mainEntityOfPage: `${BASE}/casos-de-exito/${item.slug}`,
+      mainEntityOfPage,
+      inLanguage: locale,
    };
 }
 

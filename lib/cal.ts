@@ -9,10 +9,10 @@ export const isCalConfigured = () => CAL_API_KEY.length > 0;
 
 export const CAL_SERVICE_FIELD = 'interested_services';
 export const CAL_SERVICE_OPTIONS = [
-   'Aplicaciones web a medida',
-   'Integraciones y conexión de sistemas',
-   'Aplicaciones móviles',
-   'Mantenimiento y evolución web',
+   { id: 'web', value: 'Aplicaciones web a medida' },
+   { id: 'integrations', value: 'Integraciones y conexión de sistemas' },
+   { id: 'mobile', value: 'Aplicaciones móviles' },
+   { id: 'maintenance', value: 'Mantenimiento y evolución web' },
 ] as const;
 
 export interface CalSlot {

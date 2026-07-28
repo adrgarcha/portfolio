@@ -1,5 +1,12 @@
+import type { Locale } from '@/i18n/routing';
+
 export interface NavLink {
    label: string;
+   href: string;
+}
+
+export interface MainNavLink {
+   key: 'home' | 'services' | 'cases';
    href: string;
 }
 
@@ -8,15 +15,14 @@ export interface Brand {
    logo: string;
 }
 
-export interface FooterColumn {
-   title: string;
-   links: NavLink[];
+export interface FooterLink {
+   key: string;
+   href: string;
 }
 
-export interface PainPoint {
-   n: string;
-   question: string;
-   answer: string;
+export interface FooterColumn {
+   key: 'navigation' | 'services' | 'legal';
+   links: FooterLink[];
 }
 
 export interface ServiceToken {
@@ -26,18 +32,21 @@ export interface ServiceToken {
 
 export interface Service {
    id: string;
-   title: string;
-   lead: string;
-   bullets: string[];
-   tokens: ServiceToken[];
-   detailTokens: ServiceToken[];
    href: string;
    featured?: boolean;
    num?: string;
+}
+
+export interface ServiceCopy {
+   title: string;
+   lead: string;
+   bullets: string[];
    kicker?: string;
-   problem?: string;
+   problem: string;
    howIWork?: string;
-   includes?: string[];
+   includes: string[];
+   tokens: string[];
+   detailTokens: string[];
 }
 
 export interface CaseResult {
@@ -45,32 +54,31 @@ export interface CaseResult {
    text: string;
 }
 
-export interface Case {
-   slug: string;
+export interface CaseCopy {
+   tokens: ServiceToken[];
    title: string;
    shortTitle: string;
    metaTitle?: string;
    metaDescription?: string;
-   tokens: ServiceToken[];
    thumb: string;
-   img?: string;
    result: string;
    metric: string;
-   featured?: boolean;
-   contexto: string[];
-   reto: string[];
-   solucion: string[];
-   resultado: CaseResult;
+   context: string[];
+   challenge: string[];
+   solution: string[];
+   outcome: CaseResult;
 }
+
+export interface CaseStructure {
+   id: string;
+   slug: Record<Locale, string>;
+   img?: string;
+   featured?: boolean;
+}
+
+export type Case = CaseStructure & CaseCopy;
 
 export interface Testimonial {
-   quote: string;
    name: string;
-   role: string;
    avatar: string;
-}
-
-export interface Topic {
-   text: string;
-   meta: string;
 }

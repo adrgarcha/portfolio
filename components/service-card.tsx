@@ -1,14 +1,19 @@
-import Link from 'next/link';
+import { getTranslations } from 'next-intl/server';
 
-import type { Service } from '@/lib/types';
+import { Link } from '@/i18n/navigation';
+import { toTokens } from '@/lib/services';
+import type { Service, ServiceCopy } from '@/lib/types';
 import Reveal from './reveal';
 import Tokens from './tokens';
 
 interface ServiceCardProps {
-   service: Service;
+   service: Service & ServiceCopy;
 }
 
-export default function ServiceCard({ service }: ServiceCardProps) {
+export default async function ServiceCard({ service }: ServiceCardProps) {
+   const t = await getTranslations('common');
+   const hash = service.href.split('#')[1];
+
    return (
       <Reveal as="article" className="card svc">
          <h3>
@@ -22,9 +27,9 @@ export default function ServiceCard({ service }: ServiceCardProps) {
             ))}
          </ul>
          <div className="svc-foot">
-            <Tokens tokens={service.tokens} />
-            <Link className="link-arrow" href={service.href}>
-               Ver detalle <span className="arrow">→</span>
+            <Tokens tokens={toTokens(service.tokens)} />
+            <Link className="link-arrow" href={{ pathname: '/servicios', hash }}>
+               {t('viewDetail')} <span className="arrow">→</span>
             </Link>
          </div>
       </Reveal>

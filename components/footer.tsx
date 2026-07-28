@@ -1,38 +1,62 @@
-import Link from 'next/link';
+import { getMessages, getTranslations } from 'next-intl/server';
 
-import { BUILT_WITH, COPYRIGHT, FOOTER_COLUMNS, FOOTER_STATEMENT, LINKEDIN_URL } from '@/lib/constants';
+import { Link, type AppHref } from '@/i18n/navigation';
+import type { Locale } from '@/i18n/routing';
+import { FOOTER_COLUMNS, LINKEDIN_URL } from '@/lib/constants';
 import CookieConfigButton from './cookie-config-button';
 
-export default function Footer() {
+function footerHref(href: string): AppHref {
+   const [pathname, hash] = href.split('#');
+   return (hash ? { pathname, hash } : pathname) as AppHref;
+}
+
+interface FooterColumnCopy {
+   title: string;
+   links: Record<string, string>;
+}
+
+interface FooterProps {
+   locale: Locale;
+}
+
+export default async function Footer({ locale }: FooterProps) {
+   const t = await getTranslations('footer');
+   const messages = await getMessages();
+   const columns = messages.footer.columns as unknown as Record<string, FooterColumnCopy>;
+   const footerColumns =
+      locale === 'en'
+         ? FOOTER_COLUMNS.map((col) => (col.key === 'navigation' ? { ...col, links: col.links.filter((link) => link.key !== 'sevilla') } : col))
+         : FOOTER_COLUMNS;
+
    return (
       <footer className="footer">
          <div className="wrap">
             <p className="footer-statement">
                <span className="prompt"></span>
-               {FOOTER_STATEMENT}
+               {t('statement')}
             </p>
             <div className="footer-cols">
                <div className="footer-col">
                   <h4>adri_chavero</h4>
-                  <p className="footer-brand-line">Desarrollo de aplicaciones web y móviles a medida.</p>
+                  <p className="footer-brand-line">{t('brandLine')}</p>
                   <p style={{ marginTop: '1rem' }}>
                      <a className="footer-ext" href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer">
-                        Sígueme en LinkedIn <span className="arrow">↗</span>
+                        {t('followLinkedin')} <span className="arrow">↗</span>
                      </a>
                   </p>
                </div>
-               {FOOTER_COLUMNS.map((col) => (
-                  <div className="footer-col" key={col.title}>
-                     <h4>{col.title}</h4>
+               {footerColumns.map((col) => (
+                  <div className="footer-col" key={col.key}>
+                     <h4>{columns[col.key].title}</h4>
                      <ul>
                         {col.links.map((link) => (
-                           <li key={`${col.title}-${link.href}`}>
-                              <Link href={link.href}>{link.label}</Link>
+                           <li key={`${col.key}-${link.href}`}>
+                              <Link href={footerHref(link.href)}>{columns[col.key].links[link.key]}</Link>
                            </li>
                         ))}
-                        {col.title === 'legal' && (
+                        {col.key === 'legal' && (
                            <li>
-                              <CookieConfigButton label="Configuración de cookies" />
+                              <CookieConfigButton label={t('cookieSettings')} />
                            </li>
                         )}
                      </ul>
@@ -40,8 +64,8 @@ export default function Footer() {
                ))}
             </div>
             <div className="footer-bottom">
-               <span>{COPYRIGHT}</span>
-               <span className="built">{BUILT_WITH}</span>
+               <span>{t('copyright')}</span>
+               <span className="built">{t('builtWith')}</span>
             </div>
          </div>
       </footer>

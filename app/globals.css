@@ -390,6 +390,42 @@
    .nav-cta {
       margin-left: 0.4rem;
    }
+   .locale-switch {
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+      margin-left: 0.6rem;
+      font-size: 0.82rem;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+   }
+   .locale-switch-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+   }
+   .locale-switch-sep {
+      color: var(--border);
+   }
+   .locale-current {
+      color: var(--accent);
+   }
+   .locale-link {
+      color: var(--muted);
+      transition: color var(--t-fast);
+   }
+   .locale-link:hover {
+      color: var(--text);
+   }
+   .mobile-menu .locale-switch {
+      padding: 14px var(--gutter);
+      border-top: 1px solid var(--border-soft);
+   }
+   .mobile-menu .locale-switch a {
+      display: inline;
+      padding: 0;
+      border-top: none;
+   }
    .nav-toggle {
       display: none;
       width: 40px;
@@ -1362,6 +1398,40 @@
    .cookie .btn {
       font-size: 0.85rem;
       padding: 0.65em 1.1em;
+   }
+
+   /* locale notice */
+   .locale-notice {
+      border-bottom: 1px solid var(--border-soft);
+      background: var(--surface);
+   }
+   .locale-notice-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.6rem var(--gutter);
+   }
+   .locale-notice p {
+      color: var(--muted);
+      font-size: 0.84rem;
+      font-weight: 300;
+      margin: 0;
+   }
+   .locale-notice-link {
+      color: var(--accent);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+   }
+   .locale-notice-close {
+      flex-shrink: 0;
+      color: var(--muted);
+      font-size: 0.9rem;
+      line-height: 1;
+      padding: 0.2rem;
+   }
+   .locale-notice-close:hover {
+      color: var(--text);
    }
 
    /* legal / prose pages */

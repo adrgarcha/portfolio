@@ -1,15 +1,6 @@
-import type { Metadata } from 'next';
-
-import LegalShell from '@/components/legal-shell';
-
-export const metadata: Metadata = {
-   title: 'Aviso legal',
-   robots: { index: false },
-};
-
-export default function AvisoLegalPage() {
+export default function LegalNoticeEs() {
    return (
-      <LegalShell crumb="aviso legal" title="Aviso legal">
+      <>
          <h2>1. Datos identificativos</h2>
          <p>
             En cumplimiento de la Ley 34/2002 de Servicios de la Sociedad de la Información y de Comercio Electrónico (LSSI-CE), se informa de los
@@ -48,6 +39,6 @@ export default function AvisoLegalPage() {
             Las presentes condiciones se rigen por la legislación española. Para cualquier controversia, las partes se someten a los juzgados y
             tribunales que correspondan conforme a derecho.
          </p>
-      </LegalShell>
+      </>
    );
 }

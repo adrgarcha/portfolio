@@ -1,12 +1,17 @@
+import { getTranslations } from 'next-intl/server';
+
 import Reveal from './reveal';
 import Tokens from './tokens';
-import type { Service } from '@/lib/types';
+import { toTokens } from '@/lib/services';
+import type { Service, ServiceCopy } from '@/lib/types';
 
 interface ServiceDetailBlockProps {
-   service: Service;
+   service: Service & ServiceCopy;
 }
 
-export default function ServiceDetailBlock({ service }: ServiceDetailBlockProps) {
+export default async function ServiceDetailBlock({ service }: ServiceDetailBlockProps) {
+   const t = await getTranslations('servicesPage');
+
    return (
       <section className="section-pad" id={service.id}>
          <div className="wrap about-grid">
@@ -20,11 +25,11 @@ export default function ServiceDetailBlock({ service }: ServiceDetailBlockProps)
                   {service.problem}
                </p>
                <div style={{ marginTop: '1.6rem' }}>
-                  <Tokens tokens={service.detailTokens} />
+                  <Tokens tokens={toTokens(service.detailTokens)} />
                </div>
             </Reveal>
             <Reveal>
-               <p className="comment">qué incluye</p>
+               <p className="comment">{t('includesLabel')}</p>
                <ul className="svc" style={{ marginTop: '1rem' }}>
                   {service.includes?.map((item) => (
                      <li key={item}>{item}</li>

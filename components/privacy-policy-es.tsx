@@ -1,15 +1,6 @@
-import type { Metadata } from 'next';
-
-import LegalShell from '@/components/legal-shell';
-
-export const metadata: Metadata = {
-   title: 'Política de privacidad',
-   robots: { index: false },
-};
-
-export default function PoliticaPrivacidadPage() {
+export default function PrivacyPolicyEs() {
    return (
-      <LegalShell crumb="política de privacidad" title="Política de privacidad">
+      <>
          <h2>1. Responsable del tratamiento</h2>
          <ul>
             <li>Responsable: Adrián García Chavero</li>
@@ -48,6 +39,6 @@ export default function PoliticaPrivacidadPage() {
             Si consideras que el tratamiento no se ajusta a la normativa, puedes presentar una reclamación ante la Agencia Española de Protección de
             Datos (AEPD), www.aepd.es.
          </p>
-      </LegalShell>
+      </>
    );
 }
