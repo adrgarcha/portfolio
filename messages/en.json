@@ -201,7 +201,7 @@
       "breadcrumbLabel": "services",
       "eyebrow": "services",
       "title": "How I help you solve the problem.",
-      "lede": "I work directly, one on one: I understand your business, tell you what's possible, and build software you actually use. No middlemen, no fluff, no fixed catalog pricing.",
+      "lede": "I work directly, one on one: I understand your business, tell you what's possible, and build software you actually use. No handoffs, no fluff, no fixed catalog pricing.",
       "howIWorkLabel": "how I work",
       "includesLabel": "what's included",
       "ctaHeading": "Which of these is your case?",
@@ -238,7 +238,7 @@
          "eyebrow": "what I do",
          "heading": "Custom web development, from idea to product",
          "p1": "Web application development in Seville is usually sold off the shelf: a template, a few tweaks, and off you go. I work the other way around. First I understand your business and the problem eating up your time, then I design and build the software that solves it.",
-         "p2": "I build custom web applications, management dashboards, integrations between your systems (ERP, e-commerce, invoicing), and online store development in Seville when what you need is to sell. One person from start to finish: you talk directly to me, no middlemen, no surprises."
+         "p2": "I build custom web applications, management dashboards, integrations between your systems (ERP, e-commerce, invoicing), and online store development in Seville when what you need is to sell. One person from start to finish: you talk directly to me, no handoffs, no surprises."
       },
       "forWhom": {
          "eyebrow": "who it's for",
@@ -255,7 +255,7 @@
       "howIWork": {
          "eyebrow": "how I work",
          "heading": "You talk directly to me, start to finish",
-         "p1": "I don't subcontract, and I won't pass you from a salesperson to a project manager to an intern. The web development you're hiring is done by me: the same person who understands your business is the one writing the code and the one who picks up the phone when something breaks.",
+         "p1": "I don't subcontract or pass you from one person to another. The web development you're hiring is done by me: the same person who understands your business is the one writing the code and the one who picks up the phone when something breaks.",
          "p2": "I work in phases and show you progress early, on something you can actually use, not a hundred-page document. That way we adjust fast and you don't get surprises at the end. Once we launch, I stay close to maintain it and grow it with you. I'm based in Seville, so we can also meet in person if you prefer, though most of the work runs smoothly remote."
       },
       "cases": {
@@ -298,8 +298,8 @@
          "portraitAlt": "Monesterio, the town in Extremadura where Adri Chavero grew up",
          "portraitPlaceholder": "photo · Extremadura",
          "paragraph1": "I'm from <b>Monesterio</b>, a small town in southern Extremadura, from a working-class family where nobody looks down on anyone. I wasn't one of those kids coding at twelve: I got into this because my father told me it had a future, and I found the passion for it later, in college.",
-         "paragraph2": "What came after taught me mostly what kind of work I <b>didn't</b> want. At every company I worked for, there was a wall between me and the people who actually used what I built: a middleman, a process, always something in the way. I worked half-blind, never really knowing if what I made helped anyone. And it turns out that's exactly what drives me: knowing I made someone's day easier.",
-         "paragraph3": "That's why I went freelance: to tear that wall down. Today I work as a freelance software engineer based in Spain, and to me this isn't about delivering a project and disappearing, it's about <b>caring about your product as if it were mine</b>. Working with me, you talk directly and clearly with the person building your software, and I see firsthand whether it's actually changing things for you. No middlemen, no surprises."
+         "paragraph2": "What came after taught me mostly what kind of work I <b>didn't</b> want. At every company I worked for, there was a wall between me and the people who actually used what I built: other people, a process, always something in the way. I worked half-blind, never really knowing if what I made helped anyone. And it turns out that's exactly what drives me: knowing I made someone's day easier.",
+         "paragraph3": "That's why I went freelance: to tear that wall down. Today I work as a freelance software engineer based in Spain, and to me this isn't about delivering a project and disappearing, it's about <b>caring about your product as if it were mine</b>. Working with me, you talk directly and clearly with the person building your software, and I see firsthand whether it's actually changing things for you. No handoffs, no surprises."
       },
       "cases": {
          "eyebrow": "case studies",
@@ -326,7 +326,8 @@
          "web": "Custom web applications",
          "integrations": "Integrations and system connections",
          "mobile": "Mobile applications",
-         "maintenance": "Maintenance and ongoing development"
+         "maintenance": "Maintenance and ongoing development",
+         "unsure": "I'm not sure yet"
       },
       "page": {
          "metaTitle": "Book a call",
@@ -334,7 +335,7 @@
          "breadcrumbLabel": "book a call",
          "eyebrow": "book a call",
          "heading": "Let's talk about your project.",
-         "lede": "A <strong>30-minute video call, no commitment</strong>. Tell me what you need, I'll ask the right questions, and I'll tell you honestly if and how I can help.",
+         "lede": "A <strong>30-minute video call, no commitment</strong>. You don't need a brief or technical knowledge. Tell me what problem you want to solve, and we'll explore together what might make sense.",
          "footnote": "what to expect: a conversation, not a sales pitch. You'll leave with a clear idea of next steps."
       },
       "booker": {
@@ -380,7 +381,7 @@
          "back": "‹ back to calendar",
          "name": "Name",
          "email": "Email",
-         "serviceQuestion": "Which service are you interested in?",
+         "serviceQuestion": "Which services are you interested in?",
          "notesQuestion": "What would you like to talk about? (optional)",
          "submitting": "Booking…",
          "submit": "Confirm meeting",
@@ -396,7 +397,7 @@
             "missing_fields": "Name, email, and time are required.",
             "too_long": "The name or email is too long.",
             "invalid_email": "The email doesn't look valid.",
-            "no_service_selected": "Select at least one service",
+            "no_service_selected": "Select at least one option",
             "cal_unavailable": "Couldn't create the booking. Please try again in a moment.",
             "connection_failed": "Couldn't connect. Please try again.",
             "unknown": "Something went wrong. Please try again."

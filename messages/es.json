@@ -201,7 +201,7 @@
       "breadcrumbLabel": "servicios",
       "eyebrow": "servicios",
       "title": "Cómo te ayudo a resolver el problema.",
-      "lede": "Trabajo de forma directa y cercana: entiendo tu negocio, te digo qué se puede hacer y construyo software que de verdad usas. Sin intermediarios, sin humo, sin precios cerrados de catálogo.",
+      "lede": "Trabajo de forma directa y cercana: entiendo tu negocio, te digo qué se puede hacer y construyo software que de verdad usas. Sin intermediación, sin humo, sin precios cerrados de catálogo.",
       "howIWorkLabel": "cómo trabajo",
       "includesLabel": "qué incluye",
       "ctaHeading": "¿Cuál de estos es tu caso?",
@@ -238,12 +238,12 @@
          "eyebrow": "qué hago",
          "heading": "Desarrollo web a medida, de la idea al producto",
          "p1": "El desarrollo de aplicaciones web en Sevilla suele venderse por catálogo: una plantilla, cuatro retoques y a correr. Yo trabajo al revés. Primero entiendo tu negocio y el problema que te quita horas, y a partir de ahí diseño y construyo el software que lo resuelve.",
-         "p2": "Hago aplicaciones web a medida, paneles de gestión, integraciones entre tus sistemas (ERP, e-commerce, facturación) y desarrollo de tienda online en Sevilla cuando lo que necesitas es vender. Una sola persona de principio a fin: hablas directo conmigo, sin intermediarios ni sorpresas."
+         "p2": "Hago aplicaciones web a medida, paneles de gestión, integraciones entre tus sistemas (ERP, e-commerce, facturación) y desarrollo de tienda online en Sevilla cuando lo que necesitas es vender. Una sola persona de principio a fin: hablas directo conmigo, sin intermediación ni sorpresas."
       },
       "forWhom": {
          "eyebrow": "para quién",
          "heading": "Pensado para negocios de Sevilla y Andalucía",
-         "p1": "Trabajo sobre todo con pymes, autónomos y negocios de Sevilla y alrededores que ya tienen un proceso manual o una herramienta que se les ha quedado pequeña. Si llevas tu operación a base de hojas de cálculo, WhatsApp y copia-pega, ahí es donde un desarrollo web a medida marca la diferencia.",
+         "p1": "Trabajo sobre todo con pymes, profesionales independientes y negocios de Sevilla y alrededores que ya tienen un proceso manual o una herramienta que se les ha quedado pequeña. Si llevas tu operación a base de hojas de cálculo, WhatsApp y copia-pega, ahí es donde un desarrollo web a medida marca la diferencia.",
          "list": [
             "Aplicaciones web y paneles de gestión para tu día a día",
             "Desarrollo de tienda online en Sevilla, conectada con tus sistemas",
@@ -255,7 +255,7 @@
       "howIWork": {
          "eyebrow": "cómo trabajo",
          "heading": "Hablas directo conmigo, de principio a fin",
-         "p1": "No subcontrato ni te paso de un comercial a un jefe de proyecto y de ahí a un becario. El desarrollo web que contratas lo hago yo: la misma persona que entiende tu negocio es la que escribe el código y la que te coge el teléfono cuando algo falla.",
+         "p1": "No subcontrato ni te voy pasando de una persona a otra. El desarrollo web que contratas lo hago yo: la misma persona que entiende tu negocio es la que escribe el código y la que te coge el teléfono cuando algo falla.",
          "p2": "Trabajo por fases y te enseño avances pronto, sobre algo que puedes tocar y no sobre un documento de cien páginas. Así ajustamos rápido y no te llevas sorpresas al final. Cuando lanzamos, me quedo cerca para mantenerlo y hacerlo crecer contigo. Estoy en Sevilla, así que también podemos vernos en persona si lo prefieres, aunque la mayor parte del trabajo lo llevamos en remoto sin problema."
       },
       "cases": {
@@ -298,8 +298,8 @@
          "portraitAlt": "Monesterio, pueblo de Extremadura donde se crió Adri Chavero",
          "portraitPlaceholder": "foto · Extremadura",
          "paragraph1": "Soy de <b>Monesterio</b>, un pueblo al sur de Extremadura, de una familia humilde donde no se mira a nadie por encima del hombro. No fui de esos que con doce años ya programaban: me metí en esto porque mi padre me dijo que tenía futuro, y la pasión la encontré después, ya en la carrera.",
-         "paragraph2": "Lo que vino luego me enseñó sobre todo qué trabajo <b>no</b> quería. En cada empresa por la que pasé había un muro entre yo y la gente que de verdad usaba lo que construía: un intermediario, un proceso, siempre algo de por medio. Trabajaba un poco a ciegas, sin llegar a saber si lo que hacía le servía a alguien. Y resulta que eso, saber que le mejoro el día a una persona, es justo lo que me mueve.",
-         "paragraph3": "Por eso me hice freelance: para tirar ese muro abajo. Hoy trabajo como desarrollador web freelance en Sevilla, y para mí esto no va de entregarte un trabajo y desaparecer, sino de <b>preocuparme por tu producto como si fuera mío</b>. Trabajando conmigo hablas claro y directo con quien construye tu software, y yo veo de primera mano si te cambia las cosas. Sin intermediarios y sin sorpresas."
+         "paragraph2": "Lo que vino luego me enseñó sobre todo qué trabajo <b>no</b> quería. En cada empresa por la que pasé había un muro entre yo y la gente que de verdad usaba lo que construía: otras personas, un proceso, siempre algo de por medio. Trabajaba un poco a ciegas, sin llegar a saber si lo que hacía le servía a alguien. Y resulta que eso, saber que le mejoro el día a una persona, es justo lo que me mueve.",
+         "paragraph3": "Por eso me hice freelance: para tirar ese muro abajo. Hoy trabajo como desarrollador web freelance en Sevilla, y para mí esto no va de entregarte un trabajo y desaparecer, sino de <b>preocuparme por tu producto como si fuera mío</b>. Trabajando conmigo hablas claro y directo con quien construye tu software, y yo veo de primera mano si te cambia las cosas. Sin intermediación y sin sorpresas."
       },
       "cases": {
          "eyebrow": "casos de éxito",
@@ -326,7 +326,8 @@
          "web": "Aplicaciones web a medida",
          "integrations": "Integraciones y conexión de sistemas",
          "mobile": "Aplicaciones móviles",
-         "maintenance": "Mantenimiento y evolución web"
+         "maintenance": "Mantenimiento y evolución web",
+         "unsure": "Aún no lo tengo claro"
       },
       "page": {
          "metaTitle": "Agenda una reunión",
@@ -334,7 +335,7 @@
          "breadcrumbLabel": "agenda",
          "eyebrow": "agenda una reunión",
          "heading": "Hablemos de tu proyecto.",
-         "lede": "Una videollamada de <strong>30 minutos, sin compromiso</strong>. Me cuentas tu necesidad, te hago las preguntas justas y te digo con honestidad si puedo ayudarte y cómo.",
+         "lede": "Una videollamada de <strong>30 minutos, sin compromiso</strong>. No necesitas traer un briefing ni tener conocimientos técnicos. Cuéntame qué problema quieres resolver y veremos juntos qué puede tener sentido.",
          "footnote": "qué esperar: una conversación, no una venta. Sales con una idea clara de los siguientes pasos."
       },
       "booker": {
@@ -380,7 +381,7 @@
          "back": "‹ volver al calendario",
          "name": "Nombre",
          "email": "Email",
-         "serviceQuestion": "¿En qué servicio estás interesado?",
+         "serviceQuestion": "¿Qué servicios te interesan?",
          "notesQuestion": "¿De qué quieres hablar? (opcional)",
          "submitting": "Reservando…",
          "submit": "Confirmar reunión",
@@ -396,7 +397,7 @@
             "missing_fields": "Nombre, email y hora son obligatorios.",
             "too_long": "El nombre o el email son demasiado largos.",
             "invalid_email": "El email no parece válido.",
-            "no_service_selected": "Selecciona al menos un servicio",
+            "no_service_selected": "Selecciona al menos una opción",
             "cal_unavailable": "No se pudo crear la reserva. Inténtalo de nuevo en un momento.",
             "connection_failed": "No se pudo conectar. Inténtalo de nuevo.",
             "unknown": "Ha ocurrido un error. Inténtalo de nuevo."

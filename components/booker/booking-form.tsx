@@ -4,7 +4,7 @@ import posthog from 'posthog-js';
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 
-import { CAL_SERVICE_OPTIONS } from '@/lib/cal';
+import { CAL_SERVICE_OPTIONS, CAL_UNSURE_SERVICE_VALUE } from '@/lib/cal';
 import { formatDateLong, formatTime } from '@/lib/datetime';
 
 interface BookingFormProps {
@@ -38,7 +38,16 @@ export default function BookingForm({ slot, onBack, locale, timeZone }: BookingF
    const [error, setError] = useState<string | null>(null);
 
    const toggleService = (option: string) => {
-      setServices((prev) => (prev.includes(option) ? prev.filter((s) => s !== option) : [...prev, option]));
+      if (option === CAL_UNSURE_SERVICE_VALUE) {
+         setServices((prev) => (prev.includes(option) ? [] : [option]));
+         return;
+      }
+
+      setServices((prev) =>
+         prev.includes(option)
+            ? prev.filter((service) => service !== option)
+            : [...prev.filter((service) => service !== CAL_UNSURE_SERVICE_VALUE), option],
+      );
    };
 
    const submit = async (e: React.FormEvent) => {
